@@ -1,0 +1,265 @@
+html {
+    overflow-x: hidden;
+    width: 200%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.main-container {
+    #width: 200%;
+    #height: 200%;
+    background-color: #000000;
+}
+.menu {
+    height: 20px;
+    #padding-bottom: 55px;
+}
+.menu-item {
+    float: left;
+    width: 33.3%;
+    text-align: center;
+}
+.menu-text {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    color: black;
+    line-height:13px;
+    padding: 1px 0 0px 0;
+    display:inline-block;
+    background-color: white;
+    cursor: pointer;
+}
+.vj-container {
+    float: left;
+    width: 50%;
+}
+.vj-main {
+    float: left;
+    padding-top: 55px;
+    padding-right: 50px;
+    padding-left: 50px;
+    #opacity: 1.0;
+}
+.vj-content {
+}
+.vj-item {
+    margin-bottom: 55px;
+}
+.nav-container {
+    float: right;
+    width: 60px;
+    min-width: 60px;
+}
+.nav-video {
+    float: left;
+    width: 50%;
+    height: 100%;
+    padding-top: 50px;
+}
+.video-nav-img {
+    margin-left: 5px;
+}
+.nav-theatre {
+    float: left;
+    width: 50%;
+    height: 100%;
+    background-color: white;
+    padding-top: 55px;
+}
+.theatre-nav-img {
+    margin-left: 5px;
+}
+.theatre-container {
+    float: left;
+    #width: 50%;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.theatre-main {
+    float: left;
+    #width: 100%;
+    padding-top: 45px; #reduced by the theatre-plays own padding-top
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.theatre-content {
+# will stretch according to what is inside
+}
+.theatre-menu {
+    font-size: 17px;
+    text-align: right;
+    position: fixed;
+    top: 150px;
+    right: 180px;
+    z-index: 5;
+    opacity: 1.0;
+    visibility: hidden;
+}
+.language-menu {
+    font-size: 17px;
+    text-align: right;
+    position: fixed;
+    bottom: 150px;
+    right: 180px;
+    z-index: 5;
+    opacity: 1.0;
+    visibility: hidden;
+}
+.menu-link-div {
+    #margin-top: 2px;
+    #margin-bottom: 2px;
+    padding-bottom: 8px;
+}
+.menu-link {
+    line-height:11px;
+    padding: 0px 0 1px 0;
+    display:inline-block;
+    background-color: white;
+    cursor: pointer;
+}
+.menu-link:hover {
+    #line-height:11px;
+    #padding: 0px 0 1px 0;
+    #display:inline-block;
+    #background-color: white;
+    text-decoration: line-through;
+}
+.theatre-play {
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 500px;
+    margin-left: 120px;
+}
+
+.play-heading {
+    width: 80%;
+    padding-bottom: 20px;
+    font-size: 90px;
+}
+
+.play-body {
+    padding-bottom: 30px;
+}
+
+.play-left {
+    float:left;
+    width: 40%;
+}
+
+.play-left-roles-container {
+    margin-bottom: 250px;
+}
+
+.play-left-roles {
+    width: 50%;
+}
+
+.play-left-desc {
+    width: 130%;
+    position: relative; # to use z-index
+}
+
+.play-desc {
+    background-color: white;
+    line-height: 25px;
+}
+
+.play-right {
+    float: left;
+    z-index: 1;
+    width: 40%;
+}
+
+.play-image {
+    z-index: 1;
+    width: 100%;
+}
+.sk {
+    display: none;
+}
+.sk-span {
+    display: none;
+}
+.year {
+    font-size: 15px;
+    font-weight: bold;
+}
+a.events {
+    cursor: pointer;
+    text-decoration: underline;
+    color: inherit;
+}
+
+#### gallery follows
+.gallery {
+  margin-bottom: 55px;
+}
+
+.gallery > div {
+  position: relative;
+  float: left;
+}
+
+.gallery > div > img {
+  display: block;
+  transition: transform 100ms ease-in-out 0s;
+  -webkit-transition: -webkit-transform 100ms ease-in-out 0s;
+  transform: translateZ(0);
+}
+
+.gallery > div:hover {
+  z-index: 1;
+}
+
+.gallery > div:hover > img {
+  transform: scale(2,2);
+  transition: transform 300ms ease-in-out 0s;
+  -webkit-transition: -webkit-transform 300ms ease-in-out 0s;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
+
+#### theatre gallery follows
+.theatre-gallery {
+  margin-bottom: 55px;
+}
+
+.theatre-gallery > div {
+  position: relative;
+  float: left;
+}
+
+.theatre-gallery > div > img {
+  display: block;
+  transition: transform 100ms ease-in-out 0s;
+  -webkit-transition: -webkit-transform 100ms ease-in-out 0s;
+  transform: translateZ(0);
+}
+
+.theatre-gallery > div:hover {
+  z-index: 1;
+}
+
+.theatre-gallery > div:hover > img {
+  transform: scale(2,2);
+  transition: transform 300ms ease-in-out 0s;
+  -webkit-transition: -webkit-transform 300ms ease-in-out 0s;
+}
+
+.cf:before, .cf:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+
+.cf:after {
+  clear: both;
+}
