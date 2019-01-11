@@ -10,19 +10,19 @@
 <!-- GOOGLE FONTS -->
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 <!--
-todo: 
+todo:
 -- update jquery
--- add favicon
--- add @media for various sizes
--- fix why events.html shown all the time ?
--- debug on apple ipad air
--- videos hidden at some screen sizes
--- theatre menu hidden when scrolling to the right possiby by listening for touchpad events (wont fix ATM)
 -- mobile version fixup
+---- add @media for various sizes
+---- debug on apple ipad air
+---- videos hidden at some screen sizes
+---- theatre menu hidden when scrolling to the right possibly by listening for touchpad events (wont fix ATM)
+-- add ATISMIA
 -- theatre menu not clear is a menu
 -- theatre menu big on first visit (then smalls down)
 -- add navigation to a specific performance
--- make theatre first
+-- fix why events.html shown all the time ?
+-- add favicon
 -->
 <script>
 	// GLOBALS
@@ -50,11 +50,11 @@ todo:
 
 	// set variables
 	var vj_main_width = width -1;
-        var theatre_main_width = width;			// 
+        var theatre_main_width = width;			//
 	var video_width = width -1;
 	var video_height = parseInt((width -1) / 1.77777);
 
-	// check if yt bigger as max        
+	// check if yt bigger as max
 	if (video_width > max_video_width) {
 		video_width_cmp = max_video_width;
 		video_height_cmp = max_video_height;
@@ -71,7 +71,7 @@ todo:
 
 	// set the yt-img width
 	var yt_img_width = parseInt((video_width) / 3);
-	
+
 	// set the theatre-gallery width
 	var theatre_gallery_width = (window.innerWidth-nav_width_cmp) * 0.9;
 
@@ -115,8 +115,8 @@ todo:
 </script>
 
 <style media=screen>
-::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+    display: none;
 }
 html {
 }
@@ -139,9 +139,9 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
     color: black;
-    line-height:13px; 
+    line-height:13px;
     padding: 1px 0 0px 0;
-    display:inline-block; 
+    display:inline-block;
     background-color: white;
     cursor: pointer;
 }
@@ -185,7 +185,7 @@ body{
 .theatre-nav-img {
     margin-left: 5px;
 }
-.theatre-container { 
+.theatre-container {
     position: absolute;
     top: 0px;
     left: 60px;
@@ -200,9 +200,9 @@ body{
     padding-bottom: 8px;
 }
 .menu-link {
-    line-height:11px; 
+    line-height:11px;
     padding: 0px 0 1px 0;
-    display:inline-block; 
+    display:inline-block;
     background-color: white;
 }
 .menu-link:hover {
@@ -265,7 +265,7 @@ body{
     display: none;
 }
 .year {
-    font-size: 15px; 
+    font-size: 15px;
     font-weight: bold;
 }
 a.events {
@@ -367,7 +367,7 @@ function navigate(id) {
 			current_dest = id;
 		}
 	}
-} 
+}
 
 
 function smooth_horizontal(target) {
@@ -389,7 +389,7 @@ function smooth_horizontal(target) {
 	$('#menu').animate({'marginLeft': menu_margin_left}, 50);
 	$('.menu-text').animate({'color': 'white'}, 50);
 	$('.menu-text').animate({'backgroundColor': 'black'}, 50);
-    } 
+    }
 }
 
 function bio() {
@@ -412,7 +412,7 @@ function bio() {
 	    setTimeout(function() {
 		bio_on = true;
 	    }, 100);
-	    
+
     } else {
 	    if (bio_hidden) {
 		document.getElementById('bio').style.visibility = "visible";
@@ -525,7 +525,7 @@ function set_font_sizes() {
 	var positionInfo = document.getElementById('bio').getBoundingClientRect();
 	var bottom = parseInt(positionInfo.bottom);
 	var height = window.innerHeight;
-	
+
 	while (bottom > height) {
 		font_size+= -1;
 		var txts = document.getElementsByClassName('bio-text');
@@ -535,7 +535,7 @@ function set_font_sizes() {
 		positionInfo = document.getElementById('bio').getBoundingClientRect();
 		bottom = parseInt(positionInfo.bottom);
 		height = window.innerHeight;
-	} 
+	}
 }
 
 function fix_bottoms() {
@@ -591,11 +591,11 @@ window.onload = run_onloads;
 		<p class="bio-text bioc" style="font-size: 15px; font-family: 'Roboto Condensed', sans-serif; width: 95%;">
 		Peter Gonda (aka gnd, 1983) is a theatre director, vj and computer scientist.
 		<br/></br>
-		In 2004 gnd became a member of Bratislava's first media lab Burundi, and after its demise co-founded the Itchy Bit collective, focused on happenings on the intersection of art, social issues and technology. During his studies of Applied Computer Sciences and Cognitive Sciences at Comenius University in Bratislava he became infatued with the mother of Slovak underground radios - the student internet radio Tlis.sk, where he later became the editor-in-chief. 
+		In 2004 gnd became a member of Bratislava's first media lab Burundi, and after its demise co-founded the Itchy Bit collective, focused on happenings on the intersection of art, social issues and technology. During his studies of Applied Computer Sciences and Cognitive Sciences at Comenius University in Bratislava he became infatued with the mother of Slovak underground radios - the student internet radio Tlis.sk, where he later became the editor-in-chief.
 		<br/><br/>
 		Situated on the intersection of computing technology and arts, in 2008 he became the administrator of the free arts server Sanchez, as well as helped to design, develop and bootstrap the streaming archive of The Slovak Philharmonic Orchestra. In 2010, after leaving radio Tlis, he co-founded <a href="http://easterndaze.net" class="bioc" target="_blank" style="text-decoration: underline; color: inherit;">Easterndaze.net</a>, an ongoing project dedicated to exploring underground music scenes of CEE countries, and later in 2013 co-started it's sister tape label <a href="https://babavanga.bandcamp.com" class="bioc" target="_blank" style="text-decoration: underline; color: inherit;">Baba Vanga</a>, that releases experimental electronica. His passion for radio and music kept him in touch with Czech Radio channel 4 - Radio Wave where he currently works as an external contributing <a href="http://www.rozhlas.cz/radiowave/vychodiska" class="bioc" target="_blank" style="text-decoration: underline; color: inherit;">editor</a>.
 		 <br/><br/>
-		Apart from performing solo, gnd is also a member of <a href="https://k-o-l-e-k-t-i-v.github.io/" class="bioc" target="_blank" style="text-decoration: underline; color: inherit;">Kolektiv<a/> - a loose improvisational / live-coding body of creators of algorithmic music and visuals based in Prague. His visuals are usually live-coded in environments such as Pure Data, his own <a href="https://github.com/gnd/glslr" class="bioc" target="_blank" style="text-decoration: underline; color: inherit;">glslr</a>, or <a href="https://github.com/gnd/pijockey-sound" class="bioc" target="_blank" style="text-decoration: underline; color: inherit;">pijockey</a> on Raspberry PI. 
+		Apart from performing solo, gnd is also a member of <a href="https://k-o-l-e-k-t-i-v.github.io/" class="bioc" target="_blank" style="text-decoration: underline; color: inherit;">Kolektiv<a/> - a loose improvisational / live-coding body of creators of algorithmic music and visuals based in Prague. His visuals are usually live-coded in environments such as Pure Data, his own <a href="https://github.com/gnd/glslr" class="bioc" target="_blank" style="text-decoration: underline; color: inherit;">glslr</a>, or <a href="https://github.com/gnd/pijockey-sound" class="bioc" target="_blank" style="text-decoration: underline; color: inherit;">pijockey</a> on Raspberry PI.
 		 <br/><br/>
 		Besides his visual work, gnd is currently finishing his studies of theatre direction at the DAMU Theatre Academy in Prague. Since 2010 he directed several theatre performances often working with non-actors or mixed ensembles of professional actors and non-actors.
 		</p>
@@ -677,8 +677,8 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 			<span style="color: crimson;" title="vj performance">&#x1F525;</span> 2013.02.21 - w/ Superskin @ Berlinskej Model, Prague, CZ (<a class="events evenc" target="_blank" href=https://www.facebook.com/events/1649474941970473/>fb</a>) <br/>
 
 			<br/><span class="year">2012</span><br/>
-			<span style="color: black;" title="installation">&#x1F30B;</span><span style="color: crimson;" title="vj performance">&#x1F525;</span> 2012.11.01 - Rese Arch @ Museums Quartier, Wien, AT (<a class="events evenc" target="_blank" href=https://www.facebook.com/events/273955452725858/>fb</a>) <br/> 
-			<span style="color: crimson;" title="vj performance">&#x1F525;</span> 2012.09.21 - CAB + CIL + GND @ KontrA2punkt festival, Café v Lese, Prague, CZ (<a class="events evenc" target="_blank" href=http://jlbjlt.net/event/9151>web</a> <a class="events evenc" target="_blank" href=img/events/kontra2punkt.jpg>pic</a>) <br/> 
+			<span style="color: black;" title="installation">&#x1F30B;</span><span style="color: crimson;" title="vj performance">&#x1F525;</span> 2012.11.01 - Rese Arch @ Museums Quartier, Wien, AT (<a class="events evenc" target="_blank" href=https://www.facebook.com/events/273955452725858/>fb</a>) <br/>
+			<span style="color: crimson;" title="vj performance">&#x1F525;</span> 2012.09.21 - CAB + CIL + GND @ KontrA2punkt festival, Café v Lese, Prague, CZ (<a class="events evenc" target="_blank" href=http://jlbjlt.net/event/9151>web</a> <a class="events evenc" target="_blank" href=img/events/kontra2punkt.jpg>pic</a>) <br/>
 			<span style="color: crimson;" title="vj performance">&#x1F525;</span> 2012.06.22 - CIL & GND @ VALA3KA, Nová Syntéza, Prague, CZ (<a class="events evenc" target="_blank" href=http://jlbjlt.net/event/9050>web</a>, <a class="events evenc" target="_blank" href=img/events/vala3ka.jpg>pic</a>) <br/>
 			<span style="color: blue;" title="theatre premiere">&#x1F3AD;</span> 2012.05.28 - Endgame, DAMU, Prague, CZ (<a class="events evenc" onclick="navigate('theatre')">more..</a>) <br/>
 			<span style="color: blue;" title="theatre premiere">&#x1F3AD;</span> 2012.01.30 - Nagggnagg, DAMU, Prague, CZ (<a class="events evenc" onclick="navigate('theatre')">more..</a>) <br/>
@@ -691,7 +691,7 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 			<span style="color: black;" title="installation">&#x1F30B;</span> 2011.07.07 - Nyan-sniff-cat @ Dům Umeni, Brno, CZ (<a class="events evenc" target="_blank" href=nyansniffcat.jpg>pic</a>) <br/>
 			<span style="color: crimson;" title="vj performance">&#x1F525;</span> 2011.05.02 - gnd+cil+cab @ Multiplace Festival Opening, Brno, CZ (<a class="events evenc" target="_blank" href=https://www.multiplace.sk/2011/?id=1037&c=15>web</a>, <a class="events evenc" target="_blank" href=https://vimeo.com/24068245>vid</a>) <br/>
 			<span style="color: crimson;" title="vj performance">&#x1F525;</span> 2011.03.03 - Ascarid @ Rubín, Prague, CZ <br/>
-	
+
 			<br/><span class="year">2010</span><br/>
 			<span style="color: crimson;" title="vj performance">&#x1F525;</span> 2010.11.06 - gnd+cab @ Remake Me High!, @ REmakeME, Bratislava, SK (<a class="events evenc" target="_blank" href=https://vimeo.com/16727680>vid</a>) <br/>
 			<span style="color: blue;" title="theatre tech">&#x1F3AD;</span> 2010.08.01 - 2010.10.01 Software design for PAT Theatre <br/>
@@ -729,7 +729,7 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 			<span style="color: crimson;" title="vj performance">&#x1F525;</span> 2004.04.07 - w/ Guy Van Belle (be) & workshop attendees, Bratislava, SK (<a class="events evenc" target="_blank" href=https://www.multiplace.sk/2004/index.php?tp=2&id=20&lang=0>web</a>) <br/>
 			<span style="color: crimson;" title="vj performance">&#x1F525;</span> 2004.03.13 - @ Amen, Bratislava, SK <br/>
 			<span style="color: crimson;" title="vj performance">&#x1F525;</span> 2003.12.02 - w/ Urbsounds @ Festival Alternativa, Prague, CZ <br/>
-		</div>	
+		</div>
 	</div>
 </div>
 
@@ -747,7 +747,7 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 			Github:<br/>
 			<a class="conc" href="https://github.com/gnd" target="_blank" style="text-decoration: underline; color: inherit;">github.com/gnd</a>
 			<br/>
-		</div>	
+		</div>
 	</div>
 </div>
 
@@ -821,7 +821,7 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 							<img src="img/lnchmt9_havrankova.jpg" class="yt-img"/>
 						</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
 				</div>
 				<div class="vj-item">
@@ -842,7 +842,7 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 							<img src="img/research222.png" class="yt-img"/>
 						</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
 				</div>
 				<div class="vj-item">
@@ -860,7 +860,7 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 							<img src="img/tres.jpg" class="yt-img"/>
 						</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
 				</div>
 				<div class="vj-item">
@@ -890,7 +890,7 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 							<img src="img/s11_3.jpg" class="yt-img"/>
 						</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
 				</div>
 				<div class="vj-item">
@@ -900,11 +900,11 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 					<iframe class="yt" width="1280" height="912" src="https://player.vimeo.com/video/13905660?byline=0&portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 				</div>
 			</div>
-		</div>		
-                
+		</div>
+
 	</div>
-	
- 
+
+
 	<div class="theatre-container" id="theatre-container">
 		<div class="theatre-main" id="theatre-main">
 			<div class="theatre-content">
@@ -936,14 +936,14 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 							</div>
 							<div class="play-left-desc">
 								<span class="play-desc en-span">
-									Rilato is an attempt to push the poetics of non-actors on stage to a point where the theatre, stripped of the dramatic, a topic or a message, a script or a play-text, an actor, even the theatre building itself reverts to the only quality left - that of the pure being of the non-actor on the stage. Commissioned for the Slovak experimental theatre festival Kiosk in Žilina, the director Peter Gonda worked with a group of ten volunteers from Žilina, that have replied to an open call. Deliberately avoiding the dramatic as well as the documentary mode, Rilato instead proposed another way of working with non-actors, one that is focused on real-time group dynamics, problem resolution, and consensus seeking, operating on what Eugenio Barba has called the performer’s pre-expressive level. 
+									Rilato is an attempt to push the poetics of non-actors on stage to a point where the theatre, stripped of the dramatic, a topic or a message, a script or a play-text, an actor, even the theatre building itself reverts to the only quality left - that of the pure being of the non-actor on the stage. Commissioned for the Slovak experimental theatre festival Kiosk in Žilina, the director Peter Gonda worked with a group of ten volunteers from Žilina, that have replied to an open call. Deliberately avoiding the dramatic as well as the documentary mode, Rilato instead proposed another way of working with non-actors, one that is focused on real-time group dynamics, problem resolution, and consensus seeking, operating on what Eugenio Barba has called the performer’s pre-expressive level.
 								</span>
 								<span class="play-desc sk-span">
-									Rilato je pokus posunúť poetiku neherca na javisku do bodu, kde sa divadlo, zbavené drámy, posolstva alebo výpovede, scenára a textu, herca a nakoniec aj divadelnej budovy uchýli ku jedinej ostávajúcej kvalite - “okamžitému” bytiu neherca na javisku. 
+									Rilato je pokus posunúť poetiku neherca na javisku do bodu, kde sa divadlo, zbavené drámy, posolstva alebo výpovede, scenára a textu, herca a nakoniec aj divadelnej budovy uchýli ku jedinej ostávajúcej kvalite - “okamžitému” bytiu neherca na javisku.
 Peter Gonda pracuje, v predstavení vytvorenom pre slovenský divadelný festival Kiosk, so skupinou desiatich dobrovoľníkov zo Žiliny, ktorí reagovali na otvorenú výzvu zapojiť sa do vznikajúceho projektu. Úmyselne sa vyhýbajúc dramatickému a dokumentárnemu módu, Rilato ponúka iný spôsob práce s nehercom, založený na skupinovej dynamike prebiehajúcej v reálnom čase, okamžitom riešení problémov a budovaní konsenzu, formálne operujúc na úrovni, ktorú u performéra talianský režisér Eugenio Barba nazval “pre-expresívnou”.
 								</span>
 							</div>
-			
+
 						</div>
 						<div class="play-right">
 							<img class="play-image" src="img/theatre/rilato.jpg" />
@@ -971,11 +971,11 @@ Peter Gonda pracuje, v predstavení vytvorenom pre slovenský divadelný festiva
 							<img src="img/theatre/rilato/selecta/006.jpg" class="theatre-yt-img"/>
 						</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
-				</div>				
+				</div>
 				<!-- play end -->
-			
+
 				<!-- play start -->
 				<div id="play7" class="theatre-play">
 					<div class="play-heading">
@@ -1015,7 +1015,7 @@ Peter Gonda pracuje, v predstavení vytvorenom pre slovenský divadelný festiva
 									Predstavenie nazvané po grafickej básni Césarei Tinajéro, jednej z postáv spisovateľa Roberta Bolaña, bolo tri roky vo vývoji. Premiéra predstavovala poslednú etapu procesu počas ktorého sme hľadali spôsob ako previesť poetiku čilského spisovateľa Roberta Bolaña do divadelnej podoby. Predstavenie vznikalo vďaka rezidenciám v pražskom divadle Alta (leto 2015, zima/jar 2016) a v slovenskom divadle Pôtoň (jar 2016). Počas jednotlivých etáp sme spolu so súborom improvizovali okolo tém, postáv a fragmentov zásadnnej Bolañovej knižky Divokí Detektívovia. Na základe výstupov z workshopov písala scenáristka Barbora Námerová text, ktorý sa stával vstupom do ďalšej etapy a ktorý v snahe preložiť Bolañovú poetiku do súčasnosti medzi svoje tématické okruhy postupne zahrnul BDSM, polyamorické hnutie a povstalecký anarchizmus. Herecký súbor predstavenia bol rovnomerne rozdelený na hercov a nehercov.
 								</span>
 							</div>
-			
+
 						</div>
 						<div class="play-right">
 							<img class="play-image" src="img/theatre/sion.jpg" />
@@ -1043,9 +1043,9 @@ Peter Gonda pracuje, v predstavení vytvorenom pre slovenský divadelný festiva
 							<img src="img/theatre/sion/selecta/006.jpg" class="theatre-yt-img"/>
 						</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
-				</div>				
+				</div>
 				<!-- play end -->
 
 
@@ -1056,7 +1056,7 @@ Peter Gonda pracuje, v predstavení vytvorenom pre slovenský divadelný festiva
 					</div>
 					<div class="play-heading sk">
 					POSLEDNÝ PRÍPAD DETEKTÍVA KONEČNÍKA
-					</div>	
+					</div>
 					<div class="play-body">
 						<div class="play-left">
 							<div class="play-left-roles-container">
@@ -1087,7 +1087,7 @@ Peter Gonda pracuje, v predstavení vytvorenom pre slovenský divadelný festiva
 									Grafika: Margaréta Fehér<br/>
 									Technický support: Marek Brožek, Petr Vaněk<br/>
 									Herci: Pacienti Psychiatrickej nemocnice Bohnice<br/>
-								</div>									
+								</div>
 							</div>
 							<div class="play-left-desc">
 								<span class="play-desc en-span">
@@ -1099,7 +1099,7 @@ The performance opened on 10.09.2015 and was rerun on 13.09, 16.09 and 23.09.201
 Premiera predstavenia sa konala 10.09.2015, reprízy 13.09, 16.09 a 23.09.2015.
 								</span>
 							</div>
-			
+
 						</div>
 						<div class="play-right">
 							<img class="play-image" src="img/theatre/konecnik.jpg" />
@@ -1127,9 +1127,9 @@ Premiera predstavenia sa konala 10.09.2015, reprízy 13.09, 16.09 a 23.09.2015.
 							<img src="img/theatre/konecnik/selecta/006.jpg" class="theatre-yt-img"/>
 						</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
-				</div>				
+				</div>
 				<!-- play end -->
 
 
@@ -1137,7 +1137,7 @@ Premiera predstavenia sa konala 10.09.2015, reprízy 13.09, 16.09 a 23.09.2015.
 				<div id="play5" class="theatre-play">
 					<div class="play-heading en">
 					KATJA BRUNNER - HELL IS ALSO A SAUNA
-					</div>	
+					</div>
 					<div class="play-heading sk">
 					KATJA BRUNNER - PEKLO JE TAKY JENOM SAUNA
 					</div>
@@ -1170,7 +1170,7 @@ The performance took place on 29.5.2016, and was rerun on 10.6.2016.
 Premiéra predstavenia sa konala 29.5.2016, repríza 10.6.2016.
 								</span>
 							</div>
-			
+
 						</div>
 						<div class="play-right">
 							<img class="play-image" src="img/theatre/sauna.jpg" />
@@ -1198,9 +1198,9 @@ Premiéra predstavenia sa konala 29.5.2016, repríza 10.6.2016.
 							<img src="img/theatre/sauna/selecta/001.jpg" class="theatre-yt-img"/>
 						</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
-				</div>				
+				</div>
 				<!-- play end -->
 
 
@@ -1208,7 +1208,7 @@ Premiéra predstavenia sa konala 29.5.2016, repríza 10.6.2016.
 				<div id="play4" class="theatre-play">
 					<div class="play-heading">
 					NEKLID
-					</div>	
+					</div>
 					<div class="play-body">
 						<div class="play-left">
 							<div class="play-left-roles-container">
@@ -1247,7 +1247,7 @@ The performance was opened on 09.11.2014, and rerun on 11.11 a 13.11.2014.
 Premiéra predstavenia sa konala 09.11.2014, a dve reprízy 11.11 a 13.11.2014.
 								</span>
 							</div>
-			
+
 						</div>
 						<div class="play-right">
 							<img class="play-image" src="img/theatre/neklid.jpg" />
@@ -1275,9 +1275,9 @@ Premiéra predstavenia sa konala 09.11.2014, a dve reprízy 11.11 a 13.11.2014.
 							<img src="img/theatre/neklid/selecta/006.jpg" class="theatre-yt-img"/>
 						</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
-				</div>				
+				</div>
 				<!-- play end -->
 
 
@@ -1285,7 +1285,7 @@ Premiéra predstavenia sa konala 09.11.2014, a dve reprízy 11.11 a 13.11.2014.
 				<div id="play3" class="theatre-play">
 					<div class="play-heading">
 					SARAJEVO
-					</div>	
+					</div>
 					<div class="play-body">
 						<div class="play-left">
 							<div class="play-left-roles-container">
@@ -1313,10 +1313,10 @@ The performance was staged on 30.05.2013, rerun on 31.05.2013, and 15.6.2013 in 
 								</span>
 								<span class="play-desc sk-span">
 									Udalosti odohrávajúce sa počas vojny, ktorá by sa mohla odohrávať kdekoľvek, rozprávané fragmentárnou a nelineárnou formou, ktorá sa voľne inšpiruje Denníkom Zlaty Filipovičovej, 11-ročnej Sarajevčanky opisujúcej príchod a priebeh vojny, ako aj zbierkou reportáži českého žurnalistu Jana Urbana "Všem Sráčum Navzdory". Násilie na divadle, detské hry na život a smrť, mesto v plameňoch a pocit apokalypsy. Despotický režisér a päť hercov. Zvláštna skúška pri ktorej ide o život. Alebo zvláštne mučenie, ktoré sa ponáša na divadlo? Sarajevo tématicky vychádza zo širokého zberu materiálu o občianskej vojne v bývalej Juhoslávií a z viacerých pobytov v Belehrade a Sarajeve. Cez nemožnosť vypovedať o obrovskej ľudskej tragédií sa predstavenie tematicky stočilo ku téme používania a zobrazovania násilia na divadle.<br/>
-Premiéra predstavenia sa konala 30.05.2013, prvá repríza 31.05.2013, druhá repríza v Prádelni Bohnice 15.6.2013. Predstavenie bolo takisto uvedené na divadelnom festivale Příští vlna / Next Wave v Brne, v Septembri 2013. 
+Premiéra predstavenia sa konala 30.05.2013, prvá repríza 31.05.2013, druhá repríza v Prádelni Bohnice 15.6.2013. Predstavenie bolo takisto uvedené na divadelnom festivale Příští vlna / Next Wave v Brne, v Septembri 2013.
 								</span>
 							</div>
-			
+
 						</div>
 						<div class="play-right">
 							<img class="play-image" src="img/theatre/sarajevo.jpg" />
@@ -1344,9 +1344,9 @@ Premiéra predstavenia sa konala 30.05.2013, prvá repríza 31.05.2013, druhá r
 							<img src="img/theatre/sarajevo/selecta/006.jpg" class="theatre-yt-img"/>
 						</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
-				</div>				
+				</div>
 				<!-- play end -->
 
 
@@ -1354,7 +1354,7 @@ Premiéra predstavenia sa konala 30.05.2013, prvá repríza 31.05.2013, druhá r
 				<div id="play2" class="theatre-play">
 					<div class="play-heading">
 					ENDGAME
-					</div>	
+					</div>
 					<div class="play-body">
 						<div class="play-left">
 							<div class="play-left-roles-container">
@@ -1383,7 +1383,7 @@ Premiéra predstavenia sa konala 30.05.2013, prvá repríza 31.05.2013, druhá r
 									Endgame zobrazuje skupinu piatich hackerov na ceste do ilegality v spoločnosti, ktorá sa vymkla spod kontroly a stáva sa fašistickou diktatúrou. Inšpirované pocitom bezvýchodiskovosti, ktorý so sebou priniesol nástup extrémnej pravice v krajinách centrálnej a východnej európy v roku 2012. Hra čerpala z textov Tiqqun, hnutia Anonymous, 4chan, knihy "2083: Deklarácia Európskej nezávislosti" Andersa Breivika a z autorovej vlastnej fascinácie urbánnou exploráciou.
 								</span>
 							</div>
-			
+
 						</div>
 						<div class="play-right">
 							<img class="play-image" src="img/theatre/endgame.png" />
@@ -1402,9 +1402,9 @@ Premiéra predstavenia sa konala 30.05.2013, prvá repríza 31.05.2013, druhá r
 							<img src="img/theatre/endgame/selecta/003.jpg" class="theatre-yt-img"/>
 		  				</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
-				</div>				
+				</div>
 				<!-- play end -->
 
 
@@ -1412,7 +1412,7 @@ Premiéra predstavenia sa konala 30.05.2013, prvá repríza 31.05.2013, druhá r
 				<div id="play1" class="theatre-play">
 					<div class="play-heading">
 					NAGGGNAGG
-					</div>	
+					</div>
 					<div class="play-body">
 						<div class="play-left">
 							<div class="play-left-roles-container">
@@ -1437,7 +1437,7 @@ Premiéra predstavenia sa konala 30.05.2013, prvá repríza 31.05.2013, druhá r
 									Predstavenie zobrazuje strednovrstvú českú rodinu, počas mimoriadne slávnostnej večere: o polnoci všetci previbrujú do vyššej dimenzie. Títo dobrí ľudia, s dobrými srdcami, však majú jeden problém. Ich najmladší syn je mucha. Predstavenie je voľne založené na poviedke Irwine Welsha "Záležitost mužstva Granton Star" o mužovi, ktorého boh premení na muchu, a zaoberá sa témou dehumanizácie a in group / out group dynamiky. V predstavení prominentne figuroval real-time výškou hlasu ovladaný tester schopnosti previbrovať, čas meraný aktom pitia vína, magické kryštály a automatický rotujúci jedálenský stôl.
 								</span>
 							</div>
-			
+
 						</div>
 						<div class="play-right">
 							<img class="play-image" src="img/theatre/nagggnagg.png" />
@@ -1457,9 +1457,9 @@ Premiéra predstavenia sa konala 30.05.2013, prvá repríza 31.05.2013, druhá r
 							<img src="img/theatre/nagggnagg/selecta/004.jpg" class="theatre-yt-img"/>
 		  				</div>
 						<!-- important so the gallery has a size -->
-						&nbsp; 
+						&nbsp;
 					</div>
-				</div>				
+				</div>
 				<!-- play end -->
 
 			</div>
