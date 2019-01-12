@@ -8,16 +8,11 @@ body{
     padding: 0;
 }
 
-#main-container {
-    background-color: #ff0000;
-}
-
 #menu {
     width: 90%;
     position: fixed;
     z-index: 6;
     top: 0;
-    #background-color: #00ff00;
 }
 
 .menu-item {
@@ -76,18 +71,15 @@ body{
     padding-top: 4%;
     padding-right: 5%;
     padding-left: 5%;
-    background-color: gold;
 }
 
 #vj-content {
     width: 100%;
-    background-color: pink;
 }
 
 .vj-item {
     width: 100%;
     margin-bottom: 55px;
-    background-color: yellow;
 }
 
 .video-youtube {
@@ -122,12 +114,12 @@ body{
     wdith: 666;
     float: left;
     #width: 100%;
-    padding-top: 45px; #reduced by the theatre-plays own padding-top
+    padding-top: 45px; /*reduced by the theatre-plays own padding-top*/
     padding-right: 50px;
     padding-left: 50px;
 }
 .theatre-content {
-# will stretch according to what is inside
+/*will stretch according to what is inside*/
 }
 .theatre-menu {
     font-size: 17px;
@@ -237,7 +229,6 @@ a.events {
 .gallery {
   margin-bottom: 55px;
   width: 100%;
-  background-color: lightgreen;
 }
 
 .gallery > div {
@@ -277,7 +268,9 @@ a.events {
   clear: both;
 }
 
-#### theatre gallery follows
+/*
+theatre gallery follows
+*/
 .theatre-gallery {
   margin-bottom: 55px;
   width: 666;
