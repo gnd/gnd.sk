@@ -23,14 +23,14 @@ var width = window.innerWidth - nav_width_cmp -100 -15; // -padding -chrome scro
 
 // set variables
 var vj_main_width = width -1;
-    var theatre_main_width = width;
-    var video_height = parseInt((width -1) / 1.77777);
+var theatre_main_width = width;
+var video_height = parseInt((width -1) / 1.77777);
 var visible_height = window.innerHeight - menu_padding_top - menu_text_size - menu_padding_bottom;  			//
 var video_width = 0;
 
 // if video height is bigger as visible space
-    if (video_height > visible_height) {
-            video_width = parseInt((visible_height-10) * 1.77777); 	// 720p
+if (video_height > visible_height) {
+    video_width = parseInt((visible_height-10) * 1.77777); 	// 720p
     video_height = visible_height -10;
 } else {
     wideo_width = width -1;
@@ -77,7 +77,7 @@ styleElem.type = 'text/css' ;
 
 // fill CSS
 var css = '\n'
-    css += '.vj-main { width: ' + vj_main_width + '; }\n';
+css += '.vj-main { width: ' + vj_main_width + '; }\n';
 css += '.theatre-main { width: ' + theatre_main_width + '; }\n';
 css += '.yt { width: ' + yt_width + '; height: ' + yt_height + '; padding-left: ' + yt_paddingLeft + '; }\n';
 css += '.gallery { width: ' + gallery_width + '; padding-left: ' + gallery_paddingLeft + '; }\n';

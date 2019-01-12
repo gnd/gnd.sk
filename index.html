@@ -10,6 +10,8 @@
 		-- theatre menu not clear is a menu (?)
 		-- theatre menu big on first visit (then smalls down) (?)
 		-- fix why events.html shown all the time ?
+		-- fix site end
+		-- add footer
 		-- add favicon
 -->
 <head>
@@ -23,10 +25,10 @@
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 
-	<!-- JQUERY & SITE JS-->
+	<!-- JQUERY & SITE JS -->
 	<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
 	<script type="text/javascript" src="jquery-ui.min.js"></script>
-	<script type="text/javascript" src="variables.js"></script>
+	<!--<script type="text/javascript" src="variables.js"></script>-->
 
 	<!-- MOBILE & DESKTOP STYLES -->
 	<link rel="stylesheet" media='screen and (min-width: 300px) and (max-width: 340px)' href="mobile.css"/>
@@ -56,6 +58,8 @@
 	</script>
 </head>
 <body>
+
+
 <!-- BIO -->
 <div class="bio bioc" id="bio" style="background-color: white; position: fixed; left: 30%; top: 15%; z-index: 6; opacity: 1.0; visibility: hidden; width: 40%;">
 	<div class="bio-content en bioc" style="padding-left: 5%;">
@@ -223,10 +227,9 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 </div>
 
 
-
 <!-- MAIN CONTENT -->
-<div class="main-container">
-	<div class="menu" id="menu" style="width: 90%; #margin-left: 4%; #background-color: lightgreen; position: fixed; z-index: 6;">
+<div id="main-container">
+	<div id="menu">
 		<div class="menu-item">
 			<span class="menu-text" onclick="bio()">&nbsp;&nbsp;BIO&nbsp;&nbsp;</span>
 		</div>
@@ -237,17 +240,18 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 			<span class="menu-text" onclick="contact()">&nbsp;&nbsp;CONTACT&nbsp;&nbsp;</span>
 		</div>
 	</div>
-	<div class="vj-container" id="video">
+
+	<div id="vj-container">
 		<div class="nav-container" id="theatre">
-			<div class="nav-video">
+			<div id="nav-video">
 				<img class="video-nav-img" onclick="navigate('video')" src="img/video.png" style="cursor: pointer;">
 			</div>
-			<div class="nav-theatre" id="nav-theatre">
+			<div id="nav-theatre">
 				<img class="theatre-nav-img" onclick="navigate('theatre')" src="img/theatre.png" style="cursor: pointer;">
 			</div>
-                </div>
-		<div class="vj-main" id="vj-main">
-			<div class="vj-content">
+        </div>
+		<div id="vj-main">
+			<div id="vj-content">
 				<div class="vj-item">
 					<iframe class="yt" width="1280" height="720" src="https://www.youtube.com/embed/vSbX7fc8rpY?rel=0&vq=hd720p60" frameborder="0" allowfullscreen></iframe>
 				</div>
@@ -258,7 +262,6 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 					<iframe class="yt" width="1280" height="720" src="https://www.youtube.com/embed/LJqnFPSOYhA?rel=0&vq=hd720p60" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="vj-item">
-
 					<img class="yt" src="img/rpi3.gif">
 					<!-- make this dependent on browser/version
 					<video class="yt" src="img/rpi3.webm" autoplay loop></video>
@@ -963,6 +966,7 @@ Premiéra predstavenia sa konala 30.05.2013, prvá repríza 31.05.2013, druhá r
 			</div>
 		</div>
 	</div>
+	main end
 </div>
 
 </body>

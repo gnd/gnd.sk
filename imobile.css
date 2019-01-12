@@ -2,24 +2,30 @@ html {
     overflow-x: hidden;
     width: 200%;
 }
+
 body{
     margin: 0;
     padding: 0;
 }
-.main-container {
-    #width: 200%;
-    #height: 200%;
-    background-color: #000000;
+
+#main-container {
+    background-color: #ff0000;
 }
-.menu {
-    height: 20px;
-    #padding-bottom: 55px;
+
+#menu {
+    width: 90%;
+    position: fixed;
+    z-index: 6;
+    top: 0;
+    #background-color: #00ff00;
 }
+
 .menu-item {
     float: left;
     width: 33.3%;
     text-align: center;
 }
+
 .menu-text {
     font-family: 'Roboto Condensed', sans-serif;
     font-size: 20px;
@@ -30,43 +36,64 @@ body{
     background-color: white;
     cursor: pointer;
 }
-.vj-container {
+
+#vj-container {
     float: left;
     width: 50%;
+    background: url('img/bcg/4_small.jpg') repeat-y top center;
+    background-size: 100% auto;
+    background-attachment: fixed;
 }
-.vj-main {
-    float: left;
-    padding-top: 55px;
-    padding-right: 50px;
-    padding-left: 50px;
-    #opacity: 1.0;
-}
-.vj-content {
-}
-.vj-item {
-    margin-bottom: 55px;
-}
+
 .nav-container {
     float: right;
     width: 60px;
     min-width: 60px;
 }
-.nav-video {
+
+#nav-video {
     float: left;
     width: 50%;
     height: 100%;
     padding-top: 50px;
 }
+
 .video-nav-img {
     margin-left: 5px;
 }
-.nav-theatre {
+
+#nav-theatre {
     float: left;
     width: 50%;
     height: 100%;
     background-color: white;
     padding-top: 55px;
 }
+
+#vj-main {
+    width: 86%;
+    float: left;
+    padding-top: 4%;
+    padding-right: 5%;
+    padding-left: 5%;
+    background-color: gold;
+}
+
+#vj-content {
+    width: 100%;
+    background-color: pink;
+}
+
+.vj-item {
+    width: 100%;
+    margin-bottom: 55px;
+    background-color: yellow;
+}
+
+.yt {
+    width: 100%;
+}
+
 .theatre-nav-img {
     margin-left: 5px;
 }
@@ -76,6 +103,7 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 .theatre-main {
+    wdith: 666;
     float: left;
     #width: 100%;
     padding-top: 45px; #reduced by the theatre-plays own padding-top
@@ -190,14 +218,20 @@ a.events {
     color: inherit;
 }
 
-#### gallery follows
 .gallery {
   margin-bottom: 55px;
+  width: 100%;
+  background-color: lightgreen;
 }
 
 .gallery > div {
-  position: relative;
-  float: left;
+    width: 33.33%;
+    position: relative;
+    float: left;
+}
+
+.yt-img {
+    width: 100%;
 }
 
 .gallery > div > img {
@@ -230,6 +264,7 @@ a.events {
 #### theatre gallery follows
 .theatre-gallery {
   margin-bottom: 55px;
+  width: 666;
 }
 
 .theatre-gallery > div {
@@ -262,4 +297,8 @@ a.events {
 
 .cf:after {
   clear: both;
+}
+
+.theatre-yt-img {
+    width: 666;
 }

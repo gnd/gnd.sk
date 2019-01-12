@@ -21,14 +21,14 @@ function navigate(id) {
 		}
 		// is it a horizontal or vertical scroll ?
 		// eventually there should be just one function for it
-                if ((id === 'video') || (id === 'theatre')) {
+        if ((id === 'vj-container') || (id === 'theatre')) {
 			console.log("entering smooth_horizontal");
 			smooth_horizontal(document.getElementById(id));
 			current_dest = id;
 		} else {
 			// with sion (play7) on top its the same as theatre
-                        if (((current_dest != 'theatre') && (id != '7')) ||
-                           ((current_dest != '7') && (id != 'theatre'))) {
+            if (((current_dest != 'theatre') && (id != '7')) ||
+            	((current_dest != '7') && (id != 'theatre'))) {
 				smooth_vertical(document.getElementById("play" + id));
 				set_strike(id);
 				current_dest = id;
@@ -110,31 +110,31 @@ function smooth_vertical(target) {
 function bio() {
     if (!bio_on) {
 	    if (bio_hidden) {
-		document.getElementById('bio').style.visibility = "visible";
-		bio_hidden = false;
+			document.getElementById('bio').style.visibility = "visible";
+			bio_hidden = false;
 	    }
-            if (current_dest == 'video') {
-		document.getElementById('bio').style.backgroundColor = 'white';
-		document.getElementById('bio').style.color = 'black';
+        if (current_dest == 'video') {
+			document.getElementById('bio').style.backgroundColor = 'white';
+			document.getElementById('bio').style.color = 'black';
 	    } else {
-		document.getElementById('bio').style.backgroundColor = 'black';
-		document.getElementById('bio').style.color = 'white';
+			document.getElementById('bio').style.backgroundColor = 'black';
+			document.getElementById('bio').style.color = 'white';
 	    }
 	    $("#bio").fadeIn(300);
 	    if (contact_on) {
-		hidecontact();
+			hidecontact();
 	    }
 	    setTimeout(function() {
-		bio_on = true;
+			bio_on = true;
 	    }, 100);
 
     } else {
 	    if (bio_hidden) {
-		document.getElementById('bio').style.visibility = "visible";
-		bio_hidden = false;
+			document.getElementById('bio').style.visibility = "visible";
+			bio_hidden = false;
 	    }
 	    $("#bio").fadeOut(300);
-	    bio_on = false;
+		bio_on = false;
     }
 }
 
@@ -155,14 +155,14 @@ function events() {
 	    }
 	    if (current_dest == 'video') {
 		$('html,body').animate({scrollTop:0}, 500);
-		document.getElementById('events').style.backgroundColor = 'white';
-		document.getElementById('events').style.color = 'black';
-		document.getElementById('events').style.left = '30%';
+			document.getElementById('events').style.backgroundColor = 'white';
+			document.getElementById('events').style.color = 'black';
+			document.getElementById('events').style.left = '30%';
 	    } else {
 		$('html,body').animate({scrollTop:0}, 500);
-		document.getElementById('events').style.backgroundColor = 'black';
-		document.getElementById('events').style.color = 'white';
-		document.getElementById('events').style.left = window.innerWidth * 1.3 -75;
+			document.getElementById('events').style.backgroundColor = 'black';
+			document.getElementById('events').style.color = 'white';
+			document.getElementById('events').style.left = window.innerWidth * 1.3 -75;
 	    }
 	    $("#events").fadeIn(300);
 	    if (bio_on) {
@@ -197,11 +197,11 @@ function contact() {
 		contact_hidden = false;
 	    }
 		if (current_dest == 'video') {
-		document.getElementById('contact').style.backgroundColor = 'white';
-		document.getElementById('contact').style.color = 'black';
+			document.getElementById('contact').style.backgroundColor = 'white';
+			document.getElementById('contact').style.color = 'black';
 	    } else {
-		document.getElementById('contact').style.backgroundColor = 'black';
-		document.getElementById('contact').style.color = 'white';
+			document.getElementById('contact').style.backgroundColor = 'black';
+			document.getElementById('contact').style.color = 'white';
 	    }
 	    $("#contact").fadeIn(300);
 	    if (bio_on) {
@@ -311,7 +311,7 @@ function set_font_sizes() {
 
 function set_size() {
 	var nav_width = document.getElementById('theatre').offsetWidth;
-	var width = document.getElementById('video').offsetWidth - nav_width - 100;
+	var width = document.getElementById('vj-container').offsetWidth - nav_width - 100;
 
 	// set video div dimensions
 	var vj_main = document.getElementById('vj-main');
@@ -326,13 +326,13 @@ function set_size() {
         document.getElementById('menu').style.marginLeft = menu_margin_left;
 
 	// set video dimensions
-        var video_height = parseInt((width -1) / 1.77777);
+    var video_height = parseInt((width -1) / 1.77777);
 	var visible_height = window.innerHeight - menu_padding_top - menu_text_size - menu_padding_bottom;  			//
 	var video_width = 0;
 
 	// if video height is bigger as visible space
-        if (video_height > visible_height) {
-                video_width = parseInt((visible_height-10) * 1.77777); 	// 720p
+    if (video_height > visible_height) {
+        video_width = parseInt((visible_height-10) * 1.77777); 	// 720p
 		video_height = visible_height -10;
 	} else {
 		wideo_width = width -1;
@@ -388,7 +388,7 @@ function set_size() {
 	}
 
 	// make the bio fit into the screen (copy to onloads too)var txts = document.getElementsByClassName('bio-text');
-        set_font_sizes();
+    set_font_sizes();
 }
 
 function fix_bottoms() {
