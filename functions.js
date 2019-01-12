@@ -1,3 +1,23 @@
+// GLOBALS
+//var max_video_width = 1280;
+//var max_video_height = 720;
+//var menu_padding_top = 35;
+//var menu_padding_bottom = 50;
+//var menu_text_size = 20;
+var max_background_images = 5;
+var max_plays = 7;
+var current_dest = 'video';
+var menu_hidden = true;
+var bio_hidden = true;
+var bio_on = false;
+var contact_hidden = true;
+var contact_on = false;
+var events_hidden = true;
+var events_on = false;
+var active_language = 'en';
+//var bio_text_size = 15;
+
+
 function navigate(id) {
 	// when pressed in bio
 	if (bio_on) {
@@ -441,6 +461,3 @@ jQuery(function ($) {
 		}
 	})
 });
-
-window.onload = run_onloads;
-window.addEventListener('resize', set_size);
