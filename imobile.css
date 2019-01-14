@@ -105,23 +105,27 @@ body{
 .theatre-nav-img {
     margin-left: 5px;
 }
-.theatre-container {
+
+#theatre-container {
     float: left;
-    #width: 50%;
+    width: 50%;
     font-family: 'Roboto Condensed', sans-serif;
 }
-.theatre-main {
-    wdith: 666;
+
+#theatre-main {
+    width: 100%;
     float: left;
     #width: 100%;
     padding-top: 45px; /*reduced by the theatre-plays own padding-top*/
     padding-right: 50px;
     padding-left: 50px;
 }
-.theatre-content {
+
+#theatre-content {
 /*will stretch according to what is inside*/
 }
-.theatre-menu {
+
+#theatre-menu {
     font-size: 17px;
     text-align: right;
     position: fixed;
@@ -131,7 +135,8 @@ body{
     opacity: 1.0;
     visibility: hidden;
 }
-.language-menu {
+
+#language-menu {
     font-size: 17px;
     text-align: right;
     position: fixed;
@@ -141,11 +146,13 @@ body{
     opacity: 1.0;
     visibility: hidden;
 }
+
 .menu-link-div {
     #margin-top: 2px;
     #margin-bottom: 2px;
     padding-bottom: 8px;
 }
+
 .menu-link {
     line-height:11px;
     padding: 0px 0 1px 0;
@@ -153,13 +160,11 @@ body{
     background-color: white;
     cursor: pointer;
 }
+
 .menu-link:hover {
-    #line-height:11px;
-    #padding: 0px 0 1px 0;
-    #display:inline-block;
-    #background-color: white;
     text-decoration: line-through;
 }
+
 .theatre-play {
     width: 90%;
     padding-top: 20px;
@@ -210,16 +215,20 @@ body{
     z-index: 1;
     width: 100%;
 }
+
 .sk {
     display: none;
 }
+
 .sk-span {
     display: none;
 }
+
 .year {
     font-size: 15px;
     font-weight: bold;
 }
+
 a.events {
     cursor: pointer;
     text-decoration: underline;
@@ -272,13 +281,14 @@ a.events {
 theatre gallery follows
 */
 .theatre-gallery {
-  margin-bottom: 55px;
-  width: 666;
+    margin-bottom: 55px;
+    width: 88%;
 }
 
 .theatre-gallery > div {
-  position: relative;
-  float: left;
+    width: 33.33%;
+    position: relative;
+    float: left;
 }
 
 .theatre-gallery > div > img {
@@ -309,5 +319,5 @@ theatre gallery follows
 }
 
 .theatre-yt-img {
-    width: 666;
+    width: 100%;
 }
