@@ -36,7 +36,7 @@
 
 	// set variables
 	var vj_main_width = width -1;
-        var theatre_main_width = width;			//
+    var theatre_main_width = width;			//
 	var video_width = width -1;
 	var video_height = parseInt((width -1) / 1.77777);
 
@@ -347,8 +347,8 @@ function navigate(id) {
 	if (events_on) {
 		hideevents();
 	}
-        if (id != current_dest) {
-                if ((id === 'video') || (id === 'theatre')) {
+    if (id != current_dest) {
+        if ((id === 'video') || (id === 'theatre')) {
 			smooth_horizontal(id);
 			current_dest = id;
 		}
@@ -360,21 +360,21 @@ function smooth_horizontal(target) {
     if (target == 'video') {
         document.getElementById('video').style.width = window.innerWidth;
         document.getElementById('vj-main').style.width = vj_main_width;
-	document.getElementById('vj-main').style.visibility = "visible";
+		document.getElementById('vj-main').style.visibility = "visible";
         document.getElementById('theatre-container').style.width = 0;
         document.getElementById('theatre-container').style.display = 'none';
-	$('.menu-text').animate({'color': 'black'}, 50);
-	$('.menu-text').animate({'backgroundColor': 'white'}, 50);
+		$('.menu-text').animate({'color': 'black'}, 50);
+		$('.menu-text').animate({'backgroundColor': 'white'}, 50);
     }
     if (target == 'theatre') {
         document.getElementById('theatre-container').style.width = theatre_main_width;
         document.getElementById('theatre-container').style.display = 'block';
         document.getElementById('video').style.width = 60;
         document.getElementById('vj-main').style.width = 0;
-	document.getElementById('vj-main').style.visibility = 'hidden';
-	$('#menu').animate({'marginLeft': menu_margin_left}, 50);
-	$('.menu-text').animate({'color': 'white'}, 50);
-	$('.menu-text').animate({'backgroundColor': 'black'}, 50);
+		document.getElementById('vj-main').style.visibility = 'hidden';
+		$('#menu').animate({'marginLeft': menu_margin_left}, 50);
+		$('.menu-text').animate({'color': 'white'}, 50);
+		$('.menu-text').animate({'backgroundColor': 'black'}, 50);
     }
 }
 
