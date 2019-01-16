@@ -1,18 +1,24 @@
-::-webkit-scrollbar {
-    display: none;
+html {
+    overflow-x: hidden;
+    width: 200%;
 }
 
 body{
     margin: 0;
+    padding: 0;
 }
 
-.main-container {
-    background-color: #000000;
+#main-container {
+    display: flex;
+    flex-flow: row;
+    width: 100%;
 }
 
-.menu {
-    height: 20px;
-    padding-bottom: 55px;
+#menu {
+    width: 45%;
+    position: fixed;
+    z-index: 6;
+    top: 0;
 }
 
 .menu-item {
@@ -32,33 +38,22 @@ body{
     cursor: pointer;
 }
 
-.vj-container {
-   position: absolute;
-   width: 100%;
-}
-
-.vj-main {
+#vj-container {
     float: left;
-    padding-top: 35px;
-    padding-right: 50px;
-    padding-left: 50px;
-}
-
-.vj-content {
-}
-
-.vj-item {
-    margin-bottom: 55px;
+    width: 50%;
+    background: url('img/bcg/4_small.jpg') repeat-y top center;
+    background-size: 100% auto;
+    background-attachment: fixed;
+    height: auto;
 }
 
 .nav-container {
     float: right;
     width: 60px;
-    height: 200%;
     min-width: 60px;
 }
 
-.nav-video {
+#nav-video {
     float: left;
     width: 50%;
     height: 100%;
@@ -69,33 +64,109 @@ body{
     margin-left: 5px;
 }
 
-.nav-theatre {
+#nav-theatre {
     float: left;
     width: 50%;
     height: 100%;
     background-color: white;
-    padding-top: 50px;
+    padding-top: 55px;
+}
+
+#vj-main {
+    width: 86%;
+    float: left;
+    padding-top: 4%;
+    padding-right: 5%;
+    padding-left: 5%;
+}
+
+#vj-content {
+    width: 100%;
+}
+
+.vj-item {
+    width: 100%;
+    margin-bottom: 55px;
+}
+
+.video-youtube {
+    position:relative;
+	padding-bottom:56.25%;
+	padding-top:30px;
+	height:0;
+	overflow:hidden;
+}
+
+.video-youtube iframe, .video-youtube object, .video-youtube embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.yt {
+    width: 100%;
 }
 
 .theatre-nav-img {
     margin-left: 5px;
 }
 
-.theatre-container {
-    position: absolute;
-    top: 0px;
-    left: 60px;
+#theatre-container {
+    float: left;
+    width: 50%;
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 14px;
 }
 
-.theatre-main {
+#theatre-main {
+    width: 100%;
     float: left;
-    padding-top: 35px;
+    #width: 100%;
+    padding-top: 45px; /*reduced by the theatre-plays own padding-top*/
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+#theatre-content {
+/*will stretch according to what is inside*/
+}
+
+#theatre-menu {
+    font-size: 17px;
+    text-align: right;
+    position: fixed;
+    top: 150px;
+    right: 180px;
+    z-index: 5;
+    opacity: 1.0;
+    visibility: hidden;
+}
+
+#language-menu {
+    font-size: 17px;
+    text-align: right;
+    position: fixed;
+    bottom: 150px;
+    right: 180px;
+    z-index: 5;
+    opacity: 1.0;
+    visibility: hidden;
 }
 
 .menu-link-div {
     padding-bottom: 8px;
+}
+
+.menu-link-header {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 20px;
+    color: black;
+    line-height: 13px;
+    padding: 1px 0 0px 0;
+    display: inline-block;
+    color: white;
+    background-color: black;
 }
 
 .menu-link {
@@ -103,6 +174,7 @@ body{
     padding: 0px 0 1px 0;
     display:inline-block;
     background-color: white;
+    cursor: pointer;
 }
 
 .menu-link:hover {
@@ -110,15 +182,16 @@ body{
 }
 
 .theatre-play {
-    padding-top: 10px;
-    padding-bottom: 300px;
-    margin-left: 50px;
-    margin-right: 50px;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 500px;
+    margin-left: 120px;
 }
 
 .play-heading {
+    width: 80%;
     padding-bottom: 20px;
-    font-size: 50px;
+    font-size: 90px;
 }
 
 .play-body {
@@ -131,28 +204,27 @@ body{
 }
 
 .play-left-roles-container {
-    margin-bottom: 50px;
-    font-size: 13px;
+    margin-bottom: 250px;
 }
 
 .play-left-roles {
-    width: 80%;
+    width: 50%;
 }
 
 .play-left-desc {
-    width: 170%;
+    width: 130%;
     position: relative; # to use z-index
 }
 
 .play-desc {
     background-color: white;
-    line-height: 22px;
+    line-height: 25px;
 }
 
 .play-right {
     float: left;
     z-index: 1;
-    width: 60%;
+    width: 40%;
 }
 
 .play-image {
@@ -179,14 +251,19 @@ a.events {
     color: inherit;
 }
 
-#### gallery follows
 .gallery {
   margin-bottom: 55px;
+  width: 100%;
 }
 
 .gallery > div {
-  position: relative;
-  float: left;
+    width: 33.33%;
+    position: relative;
+    float: left;
+}
+
+.yt-img {
+    width: 100%;
 }
 
 .gallery > div > img {
@@ -216,31 +293,39 @@ a.events {
   clear: both;
 }
 
-#### theatre gallery follows
+/*
+theatre gallery follows
+*/
 .theatre-gallery {
-  margin-bottom: 55px;
+    margin-bottom: 55px;
+    width: 88%;
 }
 
 .theatre-gallery > div {
-  position: relative;
-  float: left;
+    width: 33.33%;
+    position: relative;
+    float: left;
 }
 
-.gallery > div > img {
+.theatre-gallery > div > img {
   display: block;
   transition: transform 100ms ease-in-out 0s;
   -webkit-transition: -webkit-transform 100ms ease-in-out 0s;
   transform: translateZ(0);
 }
 
-.gallery > div:hover {
+.theatre-gallery > div:hover {
   z-index: 1;
 }
 
-.gallery > div:hover > img {
+.theatre-gallery > div:hover > img {
   transform: scale(2,2);
   transition: transform 300ms ease-in-out 0s;
   -webkit-transition: -webkit-transform 300ms ease-in-out 0s;
+}
+
+.theatre-yt-img {
+    width: 100%;
 }
 
 .cf:before, .cf:after {
@@ -251,4 +336,66 @@ a.events {
 
 .cf:after {
   clear: both;
+}
+
+#footer {
+    font-size: 15px;
+    padding-left: 2%;
+    width: 200%;
+    height: 1em;
+    background-color: white;
+}
+
+
+/* mailchimp style */
+#mc_embed_signup{
+    clear: left;
+    width: 100%;
+}
+
+#mc_embed_signup form {
+    text-align: left;
+    padding: 20px 0 10px 0;
+}
+
+.mc-field-group {
+    display: inline;
+}
+
+/* positions input field horizontally */
+#mc_embed_signup input.email {
+    border: 1px solid #ABB0B2;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #343434;
+    background-color: #fff;
+    box-sizing:border-box;
+    height: 20px;
+    padding: 0px 0.4em;
+    display: inline;
+    margin: 0;
+    width: 200px;
+    vertical-align:top;
+}
+
+#mc_embed_signup label {
+    display:block;
+    font-size: 15px;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding-bottom: 1%;
+}
+
+#mc_embed_signup .clear {display: inline-block;} /* positions button horizontally in line with input */
+#mc_embed_signup .button {font-size: 13px; border: none; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; letter-spacing: .03em; color: #fff; background-color: #aaa; box-sizing:border-box; height:20px; line-height: 20px; padding:0 18px; display: inline-block; margin: 0; transition: all 0.23s ease-in-out 0s;}
+#mc_embed_signup .button:hover {background-color:#777; cursor:pointer;}
+#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
+#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
+#mc_embed_signup #mce-error-response {display:none;}
+#mc_embed_signup #mce-success-response {color:#529214; display:none;}
+#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+@media (max-width: 768px) {
+    #mc_embed_signup input.email {width:100%; margin-bottom:5px;}
+    #mc_embed_signup .clear {display: block; width: 100% }
+    #mc_embed_signup .button {width: 100%; margin:0; }
 }
