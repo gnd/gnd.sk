@@ -158,9 +158,9 @@ function smooth_horizontal_mobile(target) {
     }
     if (target == 'theatre') {
 		console.log('entenring mob smooth thea');
-        document.getElementById('theatre-container').style.width = '50%';
+        document.getElementById('theatre-container').style.width = '45%';
         document.getElementById('theatre-container').style.display = 'block';
-        document.getElementById('vj-container').style.width = 60;
+        document.getElementById('vj-container').style.width = '5%';
         document.getElementById('vj-main').style.width = 0;
 		document.getElementById('vj-main').style.visibility = 'hidden';
 		$('#menu').animate({'marginLeft': '2.5%'}, 50);

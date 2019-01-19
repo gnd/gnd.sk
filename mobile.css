@@ -49,15 +49,14 @@ body{
 
 .nav-container {
     float: right;
-    width: 60px;
-    min-width: 60px;
+    width: 8%;
 }
 
 #nav-video {
     float: left;
     width: 50%;
     height: 100%;
-    padding-top: 50px;
+
 }
 
 .video-nav-img {
@@ -69,13 +68,40 @@ body{
     width: 50%;
     height: 100%;
     background-color: white;
-    padding-top: 55px;
+    padding-top: 2.4em;
+}
+
+.rotate {
+    margin-top: 6em;
+    cursor: pointer;
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.menu-text-nav {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 4.4vw;
+    font-weight: bold;
+    color: black;
+    line-height:18px;
+    padding: 1px 0 0px 0;
+    display:inline-block;
+    background-color: white;
+    cursor: pointer;
 }
 
 #vj-main {
-    width: 86%;
+    width: 82%;
     float: left;
-    padding-top: 4%;
+    padding-top: 2.6em;
     padding-right: 5%;
     padding-left: 5%;
 }
