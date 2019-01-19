@@ -223,8 +223,8 @@ function bio() {
 
 function hidebio() {
 	if (bio_hidden) {
-		document.getElementById('bio').style.visibility = "visible";
-		bio_hidden = false;
+    		document.getElementById('bio').style.visibility = "visible";
+    		bio_hidden = false;
 	    }
 	    $("#bio").fadeOut(300);
 	    bio_on = false;
@@ -232,32 +232,31 @@ function hidebio() {
 
 function events() {
     if (!events_on) {
+        $('html,body').animate({scrollTop:0}, 500);
 	    if (events_hidden) {
-		document.getElementById('events').style.visibility = "visible";
-		events_hidden = false;
+            document.getElementById('events').style.visibility = "visible";
+            events_hidden = false;
 	    }
 	    if (current_dest == 'vj-container') {
-		$('html,body').animate({scrollTop:0}, 500);
 			document.getElementById('events').style.backgroundColor = 'white';
 			document.getElementById('events').style.color = 'black';
 			document.getElementById('events').style.left = '30%';
 	    } else {
-		$('html,body').animate({scrollTop:0}, 500);
 			document.getElementById('events').style.backgroundColor = 'black';
 			document.getElementById('events').style.color = 'white';
-			document.getElementById('events').style.left = window.innerWidth * 1.3 -75;
+			document.getElementById('events').style.left = window.innerWidth * 1.3 - 75;
 	    }
 	    $("#events").fadeIn(300);
 	    if (bio_on) {
-		hidebio();
+            hidebio();
 	    }
 	    setTimeout(function() {
-		events_on = true;
+            events_on = true;
 	    }, 100);
     } else {
 	    if (events_hidden) {
-		document.getElementById('events').style.visibility = "visible";
-		events_hidden = false;
+    		document.getElementById('events').style.visibility = "visible";
+    		events_hidden = false;
 	    }
 	    $("#events").fadeOut(300);
 	    events_on = false;
@@ -266,8 +265,8 @@ function events() {
 
 function hideevents() {
 	if (events_hidden) {
-		document.getElementById('events').style.visibility = "visible";
-		events_hidden = false;
+    		document.getElementById('events').style.visibility = "visible";
+    		events_hidden = false;
 	    }
 	    $("#events").fadeOut(300);
 	    events_on = false;
