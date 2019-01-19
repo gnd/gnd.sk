@@ -107,6 +107,7 @@ function set_strike(num) {
 }
 
 function smooth_horizontal(target) {
+    console.log('entering smooth horizontal');
     var scrollContainer = target;
 
     do { //find scroll container
@@ -123,8 +124,6 @@ function smooth_horizontal(target) {
 
     // start scrolling
     scrollContainer.scrollTop = 0;
-	$('html,body').scrollLeft(targetY);
-
     if (targetY < 100) {
 		$('#theatre-menu').fadeOut(300);
 		$('#language-menu').fadeOut(300);
@@ -197,7 +196,7 @@ function bio() {
 			document.getElementById('bio').style.visibility = "visible";
 			bio_hidden = false;
 	    }
-        if (current_dest == 'video') {
+        if (current_dest == 'vj-container') {
 			document.getElementById('bio').style.backgroundColor = 'white';
 			document.getElementById('bio').style.color = 'black';
 	    } else {
@@ -237,7 +236,7 @@ function events() {
 		document.getElementById('events').style.visibility = "visible";
 		events_hidden = false;
 	    }
-	    if (current_dest == 'video') {
+	    if (current_dest == 'vj-container') {
 		$('html,body').animate({scrollTop:0}, 500);
 			document.getElementById('events').style.backgroundColor = 'white';
 			document.getElementById('events').style.color = 'black';
@@ -280,7 +279,7 @@ function contact() {
 		document.getElementById('contact').style.visibility = "visible";
 		contact_hidden = false;
 	    }
-		if (current_dest == 'video') {
+		if (current_dest == 'vj-container') {
 			document.getElementById('contact').style.backgroundColor = 'white';
 			document.getElementById('contact').style.color = 'black';
 	    } else {
