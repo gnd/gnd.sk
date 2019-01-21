@@ -53,6 +53,10 @@ body{
     font-family: 'Roboto Condensed', sans-serif;
 }
 
+#events {
+    position: absolute;
+}
+
 #bio-content {
     padding-left: 5%;
 }
@@ -453,8 +457,6 @@ theatre gallery follows
 
 #mc_embed_signup label {
     display:block;
-    font-size: 15px;
-    font-family: 'Roboto Condensed', sans-serif;
     padding-bottom: 1%;
 }
 

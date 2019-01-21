@@ -249,7 +249,9 @@ function events() {
             console.log('vj dest');
 			document.getElementById('events').style.backgroundColor = 'white';
 			document.getElementById('events').style.color = 'black';
-			document.getElementById('events').style.left = '30%';
+            if (device_type == 'desktop') {
+                document.getElementById('events').style.left = '30%';
+            }
 	    } else {
             console.log('other dest');
 			document.getElementById('events').style.backgroundColor = 'black';
