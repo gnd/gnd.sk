@@ -1,7 +1,7 @@
 // GLOBALS
 var max_background_images = 5;
 var max_plays = 8;
-var current_dest = 'video';
+var current_dest = 'vj-container';
 var menu_hidden = true;
 var bio_hidden = true;
 var bio_on = false;
@@ -235,21 +235,28 @@ function hidebio() {
 }
 
 function events() {
+    console.log('entnring events');
     if (!events_on) {
+        console.log('events not on');
         $('html,body').animate({scrollTop:0}, 500);
 	    if (events_hidden) {
+            console.log('events hidden');
             document.getElementById('events').style.visibility = "visible";
             events_hidden = false;
 	    }
+        console.log('choosing dest');
 	    if (current_dest == 'vj-container') {
+            console.log('vj dest');
 			document.getElementById('events').style.backgroundColor = 'white';
 			document.getElementById('events').style.color = 'black';
 			document.getElementById('events').style.left = '30%';
 	    } else {
+            console.log('other dest');
 			document.getElementById('events').style.backgroundColor = 'black';
 			document.getElementById('events').style.color = 'white';
 			document.getElementById('events').style.left = window.innerWidth * 1.3 - 75;
 	    }
+        console.log('doing fades');
 	    $("#events").fadeIn(300);
 	    if (bio_on) {
             hidebio();
