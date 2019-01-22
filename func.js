@@ -240,7 +240,6 @@ function bio() {
         setTimeout(function() {
             bio_on = true;
         }, 100);
-
     } else {
         if (bio_hidden) {
             document.getElementById('bio').style.visibility = "visible";
@@ -266,7 +265,6 @@ function events() {
             scrollTop: 0
         }, 500);
         if (events_hidden) {
-            console.log('events hidden');
             document.getElementById('events').style.visibility = "visible";
             events_hidden = false;
         }
@@ -279,11 +277,11 @@ function events() {
         } else {
             document.getElementById('events').style.backgroundColor = 'black';
             document.getElementById('events').style.color = 'white';
+            if (device_type == 'desktop') {
+                document.getElementById('events').style.left = '130%';
+            }
         }
         $("#events").fadeIn(300);
-        if (bio_on) {
-            hidebio();
-        }
         setTimeout(function() {
             events_on = true;
         }, 100);
