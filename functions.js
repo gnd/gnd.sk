@@ -149,14 +149,15 @@ function smooth_horizontal_mobile(target) {
     if (target == 'vj-container') {
 		console.log('entenring mob smooth vj');
         document.getElementById('vj-container').style.width = '50%';
-        document.getElementById('vj-main').style.width = '82%';
+        document.getElementById('vj-main').style.width = '81%';
 		document.getElementById('vj-main').style.visibility = "visible";
         document.getElementById('theatre').style.float = 'right';
-        document.getElementById('theatre').style.width = '8%';
+        document.getElementById('theatre').style.width = '9%';
         document.getElementById('theatre-container').style.width = 0;
         document.getElementById('theatre-container').style.display = 'none';
-		$('.menu-text').animate({'color': 'black'}, 50);
-		$('.menu-text').animate({'backgroundColor': 'white'}, 50);
+        $('#menu').animate({'marginLeft': '0%'}, 250);
+		$('.menu-text').animate({'color': 'black'}, 250);
+		$('.menu-text').animate({'backgroundColor': 'white'}, 250);
     }
     if (target == 'theatre') {
 		console.log('entenring mob smooth thea');
@@ -167,9 +168,9 @@ function smooth_horizontal_mobile(target) {
         document.getElementById('theatre').style.width = '100%';
         document.getElementById('vj-main').style.width = 0;
 		document.getElementById('vj-main').style.visibility = 'hidden';
-		$('#menu').animate({'marginLeft': '2.5%'}, 50);
-		$('.menu-text').animate({'color': 'white'}, 50);
-		$('.menu-text').animate({'backgroundColor': 'black'}, 50);
+		$('#menu').animate({'marginLeft': '2.5%'}, 250);
+		$('.menu-text').animate({'color': 'white'}, 250);
+		$('.menu-text').animate({'backgroundColor': 'black'}, 250);
     }
 }
 
