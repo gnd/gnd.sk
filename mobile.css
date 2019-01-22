@@ -1,4 +1,4 @@
-body{
+body {
     margin: 0;
     padding: 0;
 }
@@ -10,6 +10,7 @@ body{
 /*
     Top menu follows
 */
+
 #menu {
     width: 100%;
     position: fixed;
@@ -36,7 +37,7 @@ body{
     color: black;
     line-height: 0.7em;
     padding: 1px 0 0px 0;
-    display:inline-block;
+    display: inline-block;
     background-color: white;
     cursor: pointer;
 }
@@ -60,7 +61,9 @@ body{
 
 #events-content {
     padding-left: 5%;
-    padding-top: 3%;"
+    padding-top: 3%;
+    "
+
 }
 
 #contact-content {
@@ -84,6 +87,7 @@ body{
 /*
     Side navigation follows
 */
+
 #vj-container {
     float: left;
     width: 100%;
@@ -101,7 +105,6 @@ body{
     float: left;
     width: 50%;
     height: 100%;
-
 }
 
 .video-nav-img {
@@ -138,7 +141,7 @@ body{
     color: black;
     line-height: 4.5vw;
     padding: 1px 0 0px 0;
-    display:inline-block;
+    display: inline-block;
     background-color: white;
     cursor: pointer;
 }
@@ -160,11 +163,11 @@ body{
 }
 
 .video-youtube {
-    position:relative;
-	padding-bottom:56.25%;
-	padding-top:30px;
-	height:0;
-	overflow:hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
 }
 
 .video-youtube iframe, .video-youtube object, .video-youtube embed {
@@ -192,11 +195,12 @@ body{
 #theatre-main {
     width: 100%;
     float: left;
-    padding-top: 6vw; /* reduced by the theatre-plays own padding-top */
+    padding-top: 6vw;
+    /* reduced by the theatre-plays own padding-top */
 }
 
 #theatre-content {
-/*will stretch according to what is inside*/
+    /*will stretch according to what is inside*/
 }
 
 #theatre-menu {
@@ -237,9 +241,9 @@ body{
 }
 
 .menu-link {
-    line-height:11px;
+    line-height: 11px;
     padding: 0px 0 1px 0;
-    display:inline-block;
+    display: inline-block;
     background-color: white;
     cursor: pointer;
 }
@@ -307,10 +311,10 @@ a.events {
 }
 
 .gallery {
-  width: 100%;
+    width: 100%;
 }
 
-.gallery > div {
+.gallery>div {
     width: 33.33%;
     position: relative;
     float: left;
@@ -320,61 +324,62 @@ a.events {
     width: 100%;
 }
 
-.gallery > div > img {
-  display: block;
-  transition: transform 100ms ease-in-out 0s;
-  -webkit-transition: -webkit-transform 100ms ease-in-out 0s;
-  transform: translateZ(0);
+.gallery>div>img {
+    display: block;
+    transition: transform 100ms ease-in-out 0s;
+    -webkit-transition: -webkit-transform 100ms ease-in-out 0s;
+    transform: translateZ(0);
 }
 
-.gallery > div:hover {
-  z-index: 1;
+.gallery>div:hover {
+    z-index: 1;
 }
 
-.gallery > div:hover > img {
-  transform: scale(2,2);
-  transition: transform 300ms ease-in-out 0s;
-  -webkit-transition: -webkit-transform 300ms ease-in-out 0s;
+.gallery>div:hover>img {
+    transform: scale(2, 2);
+    transition: transform 300ms ease-in-out 0s;
+    -webkit-transition: -webkit-transform 300ms ease-in-out 0s;
 }
 
 .cf:before, .cf:after {
-  display: table;
-  content: "";
-  line-height: 0;
+    display: table;
+    content: "";
+    line-height: 0;
 }
 
 .cf:after {
-  clear: both;
+    clear: both;
 }
 
 /*
 theatre gallery follows
 */
+
 .theatre-gallery {
     //margin-bottom: 6vw;
 }
 
-.theatre-gallery > div {
+.theatre-gallery>div {
     width: 33.33%;
     position: relative;
     float: left;
 }
 
-.theatre-gallery > div > img {
-  display: block;
-  transition: transform 100ms ease-in-out 0s;
-  -webkit-transition: -webkit-transform 100ms ease-in-out 0s;
-  transform: translateZ(0);
+.theatre-gallery>div>img {
+    display: block;
+    transition: transform 100ms ease-in-out 0s;
+    -webkit-transition: -webkit-transform 100ms ease-in-out 0s;
+    transform: translateZ(0);
 }
 
-.theatre-gallery > div:hover {
-  z-index: 1;
+.theatre-gallery>div:hover {
+    z-index: 1;
 }
 
-.theatre-gallery > div:hover > img {
-  transform: scale(3,3);
-  transition: transform 200ms ease-in-out 0s;
-  -webkit-transition: -webkit-transform 200ms ease-in-out 0s;
+.theatre-gallery>div:hover>img {
+    transform: scale(3, 3);
+    transition: transform 200ms ease-in-out 0s;
+    -webkit-transition: -webkit-transform 200ms ease-in-out 0s;
 }
 
 .theatre-yt-img {
@@ -382,13 +387,13 @@ theatre gallery follows
 }
 
 .cf:before, .cf:after {
-  display: table;
-  content: "";
-  line-height: 0;
+    display: table;
+    content: "";
+    line-height: 0;
 }
 
 .cf:after {
-  clear: both;
+    clear: both;
 }
 
 #footer {
@@ -399,11 +404,11 @@ theatre gallery follows
     background-color: white;
 }
 
-
 /*
     Mailchimp follows
 */
-#mc_embed_signup{
+
+#mc_embed_signup {
     clear: left;
     width: 80%;
 }
@@ -417,7 +422,6 @@ theatre gallery follows
     display: inline;
 }
 
-/* positions input field horizontally */
 #mc_embed_signup input.email {
     font-size: 0.7em;
     border: 1px solid #ABB0B2;
@@ -426,21 +430,24 @@ theatre gallery follows
     border-radius: 3px;
     color: #343434;
     background-color: #fff;
-    box-sizing:border-box;
+    box-sizing: border-box;
     height: 2.5em;
     padding: 0px 0.4em;
     display: inline;
     margin: 0;
     width: 200px;
-    vertical-align:top;
+    vertical-align: top;
 }
 
 #mc_embed_signup label {
-    display:block;
+    display: block;
     padding-bottom: 1%;
 }
 
-#mc_embed_signup .clear {display: inline-block;} /* positions button horizontally in line with input */
+#mc_embed_signup .clear {
+    display: inline-block;
+}
+
 #mc_embed_signup .button {
     font-size: 0.7em;
     border: none;
@@ -450,23 +457,69 @@ theatre gallery follows
     letter-spacing: .03em;
     color: #fff;
     background-color: #aaa;
-    box-sizing:border-box;
+    box-sizing: border-box;
     height: 2.5em;
     line-height: 20px;
-    padding:0 18px;
+    padding: 0 18px;
     display: inline-block;
     margin: 0;
     transition: all 0.23s ease-in-out 0s;
 }
 
-#mc_embed_signup .button:hover {background-color:#777; cursor:pointer;}
-#mc_embed_signup div#mce-responses {float:left; top:-1.4em; padding:0em .5em 0em .5em; overflow:hidden; width:90%;margin: 0 5%; clear: both;}
-#mc_embed_signup div.response {margin:1em 0; padding:1em .5em .5em 0; font-weight:bold; float:left; top:-1.5em; z-index:1; width:80%;}
-#mc_embed_signup #mce-error-response {display:none;}
-#mc_embed_signup #mce-success-response {color:#529214; display:none;}
-#mc_embed_signup label.error {display:block; float:none; width:auto; margin-left:1.05em; text-align:left; padding:.5em 0;}
+#mc_embed_signup .button:hover {
+    background-color: #777;
+    cursor: pointer;
+}
+
+#mc_embed_signup div#mce-responses {
+    float: left;
+    top: -1.4em;
+    padding: 0em .5em 0em .5em;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 5%;
+    clear: both;
+}
+
+#mc_embed_signup div.response {
+    margin: 1em 0;
+    padding: 1em .5em .5em 0;
+    font-weight: bold;
+    float: left;
+    top: -1.5em;
+    z-index: 1;
+    width: 80%;
+}
+
+#mc_embed_signup #mce-error-response {
+    display: none;
+}
+
+#mc_embed_signup #mce-success-response {
+    color: #529214;
+    display: none;
+}
+
+#mc_embed_signup label.error {
+    display: block;
+    float: none;
+    width: auto;
+    margin-left: 1.05em;
+    text-align: left;
+    padding: .5em 0;
+}
+
 @media (max-width: 768px) {
-    #mc_embed_signup input.email {width:100%; margin-bottom:5px;}
-    #mc_embed_signup .clear {display: block; width: 100% }
-    #mc_embed_signup .button {width: 100%; margin:0; }
+    #mc_embed_signup input.email {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    #mc_embed_signup .clear {
+        display: block;
+        width: 100%
+    }
+    #mc_embed_signup .button {
+        width: 100%;
+        margin: 0;
+    }
 }
