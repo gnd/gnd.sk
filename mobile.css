@@ -195,10 +195,7 @@ body{
 #theatre-main {
     width: 100%;
     float: left;
-    #width: 100%;
-    padding-top: 45px; /*reduced by the theatre-plays own padding-top*/
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-top: 6vw; /* reduced by the theatre-plays own padding-top */
 }
 
 #theatre-content {
@@ -257,12 +254,11 @@ body{
 .theatre-play {
     width: 90%;
     padding-top: 20px;
-    padding-bottom: 500px;
-    margin-left: 120px;
+    padding-bottom: 15vw;
+    margin-left: 5vw;
 }
 
 .play-heading {
-    width: 80%;
     padding-bottom: 20px;
     font-size: 90px;
 }
@@ -272,21 +268,12 @@ body{
 }
 
 .play-left {
-    float:left;
-    width: 40%;
+    width: 100%;
+    margin-bottom: 5vw;
 }
 
 .play-left-roles-container {
-    margin-bottom: 250px;
-}
-
-.play-left-roles {
-    width: 50%;
-}
-
-.play-left-desc {
-    width: 130%;
-    position: relative; # to use z-index
+    margin-bottom: 5vw;
 }
 
 .play-desc {
@@ -295,13 +282,10 @@ body{
 }
 
 .play-right {
-    float: left;
-    z-index: 1;
-    width: 40%;
+    width: 100%;
 }
 
 .play-image {
-    z-index: 1;
     width: 100%;
 }
 
@@ -370,8 +354,7 @@ a.events {
 theatre gallery follows
 */
 .theatre-gallery {
-    margin-bottom: 55px;
-    width: 88%;
+    //margin-bottom: 6vw;
 }
 
 .theatre-gallery > div {
@@ -392,9 +375,9 @@ theatre gallery follows
 }
 
 .theatre-gallery > div:hover > img {
-  transform: scale(2,2);
-  transition: transform 300ms ease-in-out 0s;
-  -webkit-transition: -webkit-transform 300ms ease-in-out 0s;
+  transform: scale(3,3);
+  transition: transform 200ms ease-in-out 0s;
+  -webkit-transition: -webkit-transform 200ms ease-in-out 0s;
 }
 
 .theatre-yt-img {
