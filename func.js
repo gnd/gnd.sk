@@ -30,7 +30,6 @@ function detect_client() {
     if (mq4.matches) {
         device_type = 'phone';
     }
-
     const mq5 = window.matchMedia('screen and (min-width: 700px) and (min-height: 1200px)');
     if (mq5.matches) {
         device_type = "desktop";
@@ -114,9 +113,8 @@ function smooth_horizontal(target) {
     if (targetY < 100) {
         $('#theatre-menu').fadeOut(300);
         $('#language-menu').fadeOut(300);
-        var menu_margin_left = parseInt((window.innerWidth * 0.1 - 60 - 15) / 2);
         $('#menu').animate({
-            'marginLeft': menu_margin_left
+            'marginLeft': '2.5%'
         }, 300);
         $('.menu-text').animate({
             'color': 'black'
@@ -124,6 +122,9 @@ function smooth_horizontal(target) {
         $('.menu-text').animate({
             'backgroundColor': 'white'
         }, 300);
+        $('.nav-container').animate({
+            'right': '0%'
+        }, 500);
     }
     $('html,body').animate({
         scrollLeft: targetY
@@ -131,9 +132,8 @@ function smooth_horizontal(target) {
     if (targetY > 100) {
         $("#theatre-menu").fadeIn(500);
         $("#language-menu").fadeIn(500);
-        var menu_margin_left = parseInt((window.innerWidth * 0.1 - 60 - 15) / 2) + 60;
         $('#menu').animate({
-            'marginLeft': menu_margin_left
+            'marginLeft': '5%'
         }, 300);
         $('.menu-text').animate({
             'color': 'white'
@@ -141,6 +141,9 @@ function smooth_horizontal(target) {
         $('.menu-text').animate({
             'backgroundColor': 'black'
         }, 300);
+        $('.nav-container').animate({
+            'right':'97%'
+        }, 500);
     }
 
 }

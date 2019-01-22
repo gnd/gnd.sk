@@ -23,6 +23,7 @@ body {
     position: fixed;
     z-index: 6;
     top: 0;
+    margin-left: 2.5%;
 }
 
 .menu-item-mobile {
@@ -105,8 +106,9 @@ body {
 }
 
 .nav-container {
-    float: right;
     width: 3%;
+    right: 0%;
+    height: 100%;
 }
 
 #nav-video {
