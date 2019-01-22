@@ -260,7 +260,7 @@ body{
 
 .play-heading {
     padding-bottom: 20px;
-    font-size: 90px;
+    font-size: 15vw;
 }
 
 .play-body {
@@ -270,6 +270,7 @@ body{
 .play-left {
     width: 100%;
     margin-bottom: 5vw;
+    font-size: 3vw;
 }
 
 .play-left-roles-container {
@@ -278,7 +279,7 @@ body{
 
 .play-desc {
     background-color: white;
-    line-height: 25px;
+    line-height: 4vw;
 }
 
 .play-right {
