@@ -1,9 +1,8 @@
 <html>
 <!--
 	todo:
-		-- mobile CSS fixup
-		---- debug on devices
-		-- make side navigation static
+		-- debug on devices
+		-- make side navigation fixed (desktop)
 		-- add favicon
 		-- add more info to performances
 		-- add more pics to performances
@@ -55,7 +54,7 @@
 <body>
 
 <!-- BIO -->
-<div class="top_menu" id="bio">
+<div class="info_div" id="bio">
 	<div id="bio-content">
 		<p id="bio-text">
 		Peter Gonda (aka gnd, 1983) is a theatre director, vj and computer scientist.
@@ -85,7 +84,7 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 
 
 <!-- EVENTS -->
-<div class="top_menu" id="events">
+<div class="info_div" id="events">
 	<div id="events-content">
 		<div id="events-text">
 			<br/><span class="year">2018</span><br/>
@@ -204,7 +203,7 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 
 
 <!-- CONTACT -->
-<div class="top_menu" id="contact">
+<div class="info_div" id="contact">
 	<div id="contact-content">
 		<div id="contact-text">
 			Email:<br/>
@@ -233,21 +232,24 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 	</div>
 </div>
 
+<!-- MENU -->
+<div id="menu">
+	<div class="menu-item-mobile">
+		<span id="menu-mobile" class="menu-text" onclick="navigate_mobile()">THEATRE</span>
+	</div>
+	<div class="menu-item">
+		<span class="menu-text menu-bio" onclick="bio()">BIO</span>
+	</div>
+	<div class="menu-item">
+		<span class="menu-text" onclick="events()">EVENTS</span>
+	</div>
+	<div class="menu-item">
+		<span class="menu-text" onclick="contact()">CONTACT</span>
+	</div>
+</div>
 
 <!-- MAIN CONTENT -->
 <div id="main-container">
-	<div id="menu">
-		<div class="menu-item">
-			<span class="menu-text menu-bio" onclick="bio()">&nbsp;&nbsp;BIO&nbsp;&nbsp;</span>
-		</div>
-		<div class="menu-item">
-			<span class="menu-text" onclick="events()">&nbsp;&nbsp;EVENTS&nbsp;&nbsp;</span>
-		</div>
-		<div class="menu-item">
-			<span class="menu-text" onclick="contact()">&nbsp;&nbsp;CONTACT&nbsp;&nbsp;</span>
-		</div>
-	</div>
-
 	<div id="vj-container">
 		<div class="nav-container" id="theatre">
 			<div id="nav-video">
@@ -413,9 +415,7 @@ Nachádzajúc sa v zóne medzi výpočtovou technológiou a umením, v roku 2008
 				<!-- play start -->
 				<a name="atismia"></a>
 				<div id="play9" class="theatre-play">
-				    <div class="play-heading">
-				    A.T.I.S.M.I.A.
-				    </div>
+				    <div class="play-heading">A.T.I.S.M.I.A.</div>
 				    <div class="play-body">
 				        <div class="play-left">
 				            <div class="play-left-roles-container">

@@ -1,39 +1,38 @@
-html {
-    overflow-x: hidden;
-    //width: 200%;
-}
-
 body{
     margin: 0;
     padding: 0;
 }
 
 #main-container {
-    display: flex;
-    flex-flow: row;
-    width: 200%;
-    overflow-x: hidden;
+    width: 100%;
 }
 
 /*
     Top menu follows
 */
 #menu {
-    width: 45%;
+    width: 100%;
     position: fixed;
     z-index: 6;
     top: 0;
+    margin-left: 1%;
+}
+
+.menu-item-mobile {
+    float: left;
+    margin-left: 5%;
+    text-align: center;
 }
 
 .menu-item {
     float: left;
-    margin-left: 8%;
+    margin-left: 5%;
     text-align: center;
 }
 
 .menu-text {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 2.2em;
+    font-size: 6vw;
     color: black;
     line-height: 0.7em;
     padding: 1px 0 0px 0;
@@ -42,16 +41,16 @@ body{
     cursor: pointer;
 }
 
-.top_menu {
+.info_div {
     background-color: white;
-    position: fixed;
-    left: 2.5%;
-    top: 3%;
+    position: absolute;
+    left: 5%;
+    top: 5%;
     z-index: 6;
     opacity: 1.0;
     visibility: hidden;
-    width: 41.5%;
-    font-size: 1.5em;
+    width: 90%;
+    font-size: 1.2em;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -87,7 +86,7 @@ body{
 */
 #vj-container {
     float: left;
-    width: 50%;
+    width: 100%;
     background: url('img/bcg/4_small.jpg') repeat-y top center;
     background-size: 100% auto;
     background-attachment: fixed;
@@ -95,8 +94,7 @@ body{
 }
 
 .nav-container {
-    float: right;
-    width: 9%;
+    display: none;
 }
 
 #nav-video {
@@ -146,8 +144,7 @@ body{
 }
 
 #vj-main {
-    width: 81%;
-    float: left;
+    width: 90%;
     padding-top: 4.5em;
     padding-right: 5%;
     padding-left: 5%;
@@ -159,7 +156,7 @@ body{
 
 .vj-item {
     width: 100%;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
 }
 
 .video-youtube {
@@ -187,8 +184,8 @@ body{
 }
 
 #theatre-container {
-    float: left;
-    width: 50%;
+    display: none;
+    width: 100%;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
@@ -310,7 +307,6 @@ a.events {
 }
 
 .gallery {
-  margin-bottom: 55px;
   width: 100%;
 }
 

@@ -61,33 +61,24 @@ function navigate(id) {
 	// only if necessary
     if (id != current_dest) {
 		console.log('id is not current_dest');
-		if (device_type == 'desktop') {
-			console.log('device is desktop');
-			// first loading of theatre
-			if ((id === 'theatre') && (menu_hidden)) {
-				$('#theatre-menu').fadeOut(10);
-	        	document.getElementById('theatre-menu').style.visibility = "visible";
-				$('#language-menu').fadeOut(10);
-	        	document.getElementById('language-menu').style.visibility = "visible";
-				menu_hidden = false;
-			}
-			// is it a horizontal or vertical scroll ?
-			// eventually there should be just one function for it
-	    	if ((id === 'vj-container') || (id === 'theatre')) {
-				smooth_horizontal(document.getElementById(id));
-				current_dest = id;
-			} else {
-	            if (((current_dest != 'theatre') && (id != String(max_plays))) ||
-	            	((current_dest != String(max_plays)) && (id != 'theatre'))) {
-					smooth_vertical(document.getElementById("play" + id));
-					set_strike(id);
-					current_dest = id;
-				}
-			}
+		// first loading of theatre
+		if ((id === 'theatre') && (menu_hidden)) {
+			$('#theatre-menu').fadeOut(10);
+	       	document.getElementById('theatre-menu').style.visibility = "visible";
+			$('#language-menu').fadeOut(10);
+	       	document.getElementById('language-menu').style.visibility = "visible";
+			menu_hidden = false;
+		}
+		// is it a horizontal or vertical scroll ?
+		// eventually there should be just one function for it
+	   	if ((id === 'vj-container') || (id === 'theatre')) {
+			smooth_horizontal(document.getElementById(id));
+			current_dest = id;
 		} else {
-			console.log('device is not desktop, id is: ' + id);
-			if ((id === 'vj-container') || (id === 'theatre')) {
-				smooth_horizontal_mobile(id);
+	           if (((current_dest != 'theatre') && (id != String(max_plays))) ||
+	           	((current_dest != String(max_plays)) && (id != 'theatre'))) {
+				smooth_vertical(document.getElementById("play" + id));
+				set_strike(id);
 				current_dest = id;
 			}
 		}
@@ -144,33 +135,46 @@ function smooth_horizontal(target) {
 
 }
 
+function navigate_mobile() {
+    if (current_dest == 'vj-container') {
+        id = 'theatre';
+    } else {
+        id = 'vj-container';
+    }
+    smooth_horizontal_mobile(id);
+    current_dest = id;
+}
+
 function smooth_horizontal_mobile(target) {
 	console.log(target);
     if (target == 'vj-container') {
 		console.log('entenring mob smooth vj');
-        document.getElementById('vj-container').style.width = '50%';
-        document.getElementById('vj-main').style.width = '81%';
+        document.getElementById('vj-container').style.display = 'block';
+        document.getElementById('vj-container').style.width = '100%';
+        document.getElementById('vj-main').style.width = '90%';
 		document.getElementById('vj-main').style.visibility = "visible";
-        document.getElementById('theatre').style.float = 'right';
-        document.getElementById('theatre').style.width = '9%';
-        document.getElementById('theatre-container').style.width = 0;
+        document.getElementById('theatre').style.display = 'none';
         document.getElementById('theatre-container').style.display = 'none';
-        $('#menu').animate({'marginLeft': '0%'}, 250);
+        $('#menu').animate({'marginLeft': '1%'}, 250);
 		$('.menu-text').animate({'color': 'black'}, 250);
 		$('.menu-text').animate({'backgroundColor': 'white'}, 250);
+        document.getElementById('menu-mobile').removeChild(document.getElementById('menu-mobile').firstChild);
+        document.getElementById('menu-mobile').appendChild(document.createTextNode("THEATRE"));
     }
     if (target == 'theatre') {
-		console.log('entenring mob smooth thea');
-        document.getElementById('theatre-container').style.width = '45.5%';
+		console.log('entering mob smooth thea');
+        document.getElementById('theatre-container').style.width = '100%';
         document.getElementById('theatre-container').style.display = 'block';
-        document.getElementById('vj-container').style.width = '4.5%';
+        document.getElementById('vj-container').style.display = 'none';
         document.getElementById('theatre').style.float = 'left';
         document.getElementById('theatre').style.width = '100%';
         document.getElementById('vj-main').style.width = 0;
 		document.getElementById('vj-main').style.visibility = 'hidden';
-		$('#menu').animate({'marginLeft': '2.5%'}, 250);
+		$('#menu').animate({'marginLeft': '3%'}, 250);
 		$('.menu-text').animate({'color': 'white'}, 250);
 		$('.menu-text').animate({'backgroundColor': 'black'}, 250);
+        document.getElementById('menu-mobile').removeChild(document.getElementById('menu-mobile').firstChild);
+        document.getElementById('menu-mobile').appendChild(document.createTextNode("VIDEO"));
     }
 }
 
@@ -257,7 +261,6 @@ function events() {
             console.log('other dest');
 			document.getElementById('events').style.backgroundColor = 'black';
 			document.getElementById('events').style.color = 'white';
-			document.getElementById('events').style.left = window.innerWidth * 1.3 - 75;
 	    }
         console.log('doing fades');
 	    $("#events").fadeIn(300);

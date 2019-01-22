@@ -24,6 +24,10 @@ body{
     top: 0;
 }
 
+.menu-item-mobile {
+    display: none;
+}
+
 .menu-item {
     float: left;
     width: 33.3%;
