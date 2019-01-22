@@ -217,7 +217,9 @@ function smooth_vertical(target) {
         targetY += target.offsetTop;
     } while (target = target.offsetParent);
 
-    scrollContainer.scrollLeft = targetX;
+    $('html,body').animate({
+        scrollTop: targetY
+    }, 500);
     $('html,body').animate({
         scrollTop: targetY
     }, 500);
