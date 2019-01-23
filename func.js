@@ -148,7 +148,7 @@ function smooth_horizontal(target) {
             'backgroundColor': 'black'
         }, 300);
         $('.nav-container').animate({
-            'right':'97%'
+            'right': '97%'
         }, 500);
     }
 
@@ -425,7 +425,7 @@ jQuery(function($) {
 });
 
 /* Light YouTube Embeds by @labnol */
-    /* Web: http://labnol.org/?p=27941 */
+/* Web: http://labnol.org/?p=27941 */
 
 document.addEventListener("DOMContentLoaded",
     function() {
