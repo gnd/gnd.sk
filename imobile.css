@@ -550,3 +550,64 @@ theatre gallery follows
         margin: 0;
     }
 }
+
+/* Light YouTube Embeds by @labnol */
+
+/* Web: http://labnol.org/?p=27941 */
+
+.youtube-player {
+    position: relative;
+    padding-bottom: 56.23%;
+    /* Use 75% for 4:3 videos */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    margin: 5px;
+}
+
+.youtube-player iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: transparent;
+}
+
+.youtube-player img {
+    bottom: 0;
+    display: block;
+    left: 0;
+    margin: auto;
+    /* slightly bigger than 100% to hide the upper and lower black borders */
+    max-width: 102%;
+    /* slightly bigger than 100% to hide the upper and lower black borders */
+    width: 102%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    height: auto;
+    cursor: pointer;
+    -webkit-transition: .4s all;
+    -moz-transition: .4s all;
+    transition: .4s all;
+}
+
+.youtube-player img:hover {
+    -webkit-filter: brightness(125%);
+}
+
+.youtube-player .play {
+    height: 256px;
+    width: 256px;
+    left: 50%;
+    top: 50%;
+    margin-left: -128px;
+    margin-top: -128px;
+    position: absolute;
+    background: url('assets/play.png') no-repeat;
+    cursor: pointer;
+}
