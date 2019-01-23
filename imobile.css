@@ -595,17 +595,17 @@ theatre gallery follows
 }
 
 .youtube-player img:hover {
-    -webkit-filter: brightness(75%);
+    -webkit-filter: brightness(125%);
 }
 
 .youtube-player .play {
-    height: 72px;
-    width: 72px;
+    height: 256px;
+    width: 256px;
     left: 50%;
     top: 50%;
-    margin-left: -36px;
-    margin-top: -36px;
+    margin-left: -128px;
+    margin-top: -128px;
     position: absolute;
-    background: url("//i.imgur.com/TxzC70f.png") no-repeat;
+    background: url('assets/play.png') no-repeat;
     cursor: pointer;
 }
