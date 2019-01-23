@@ -581,8 +581,10 @@ theatre gallery follows
     display: block;
     left: 0;
     margin: auto;
-    max-width: 100%;
-    width: 100%;
+    /* slightly bigger than 100% to hide the upper and lower black borders */
+    max-width: 102%;
+    /* slightly bigger than 100% to hide the upper and lower black borders */
+    width: 102%;
     position: absolute;
     right: 0;
     top: 0;

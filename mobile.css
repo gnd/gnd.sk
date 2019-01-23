@@ -553,8 +553,10 @@ theatre gallery follows
     display: block;
     left: 0;
     margin: auto;
-    max-width: 100%;
-    width: 100%;
+    /* slightly bigger than 100% to hide the upper and lower black borders */
+    max-width: 103%;
+    /* slightly bigger than 100% to hide the upper and lower black borders */
+    width: 103%;
     position: absolute;
     right: 0;
     top: 0;
@@ -571,13 +573,14 @@ theatre gallery follows
 }
 
 .youtube-player .play {
-    height: 256px;
-    width: 256px;
+    height: 20vw;
+    width: 20vw;
     left: 50%;
     top: 50%;
-    margin-left: -128px;
-    margin-top: -128px;
+    margin-left: -10vw;
+    margin-top: -10vw;
     position: absolute;
     background: url('assets/play.png') no-repeat;
+    background-size: 20vw;
     cursor: pointer;
 }
