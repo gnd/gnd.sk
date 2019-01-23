@@ -46,8 +46,6 @@ function detect_client() {
 
 
 function navigate(id) {
-    console.log('entering navigate');
-    // when pressed in bio
     if (bio_on) {
         hidebio();
     }
@@ -57,7 +55,6 @@ function navigate(id) {
     if (events_on) {
         hideevents();
     }
-    // only if necessary
     if (id != current_dest) {
         // first loading of theatre
         if ((id === 'theatre') && (menu_hidden)) {
@@ -68,6 +65,7 @@ function navigate(id) {
             menu_hidden = false;
         }
         if ((id === 'vj-container') || (id === 'theatre')) {
+            unset_strike();
             smooth_horizontal(document.getElementById(id));
             current_dest = id;
         } else {
@@ -90,6 +88,14 @@ function set_strike(num) {
         } else {
             el.style.textDecoration = "";
         }
+    }
+}
+
+function unset_strike() {
+    for (var i = 1; i <= max_plays; i++) {
+        var elid = "link" + i;
+        var el = document.getElementById(elid);
+        el.style.textDecoration = "";
     }
 }
 
