@@ -377,6 +377,7 @@ function language() {
             txt.style.display = "none";
         });
         // change settings
+        document.getElementById('link10').textContent = 'ŠEST PŘǏBĚHŮ O VZNIKU A ZÁNIKU';
         document.getElementById('link6').textContent = 'POSLEDNÝ PRÍPAD DETEKTÍVA KONEČNÍKA';
         document.getElementById('link5').textContent = 'KATJA BRUNNER - PEKLO JE TAKY JENOM SAUNA';
         active_language = 'sk';
@@ -403,6 +404,7 @@ function language() {
             txt.style.display = "none";
         });
         // change settings
+        document.getElementById('link10').textContent = 'SIX STORIES';
         document.getElementById('link6').textContent = 'LAST CASE OF DETECTIVE KONEČNÍK';
         document.getElementById('link5').textContent = 'KATJA BRUNNER - HELL IS ALSO A SAUNA';
         active_language = 'en';
