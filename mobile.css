@@ -359,26 +359,13 @@ theatre gallery follows
 }
 
 .theatre-gallery>div {
-    width: 33.33%;
+    width: 100%;
     position: relative;
     float: left;
 }
 
 .theatre-gallery>div>img {
     display: block;
-    transition: transform 100ms ease-in-out 0s;
-    -webkit-transition: -webkit-transform 100ms ease-in-out 0s;
-    transform: translateZ(0);
-}
-
-.theatre-gallery>div:hover {
-    z-index: 1;
-}
-
-.theatre-gallery>div:hover>img {
-    transform: scale(3, 3);
-    transition: transform 200ms ease-in-out 0s;
-    -webkit-transition: -webkit-transform 200ms ease-in-out 0s;
 }
 
 .theatre-yt-img {
