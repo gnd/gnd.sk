@@ -314,7 +314,7 @@ a.events {
 }
 
 .gallery>div {
-    width: 33.33%;
+    width: 100%;
     position: relative;
     float: left;
 }
@@ -325,19 +325,6 @@ a.events {
 
 .gallery>div>img {
     display: block;
-    transition: transform 100ms ease-in-out 0s;
-    -webkit-transition: -webkit-transform 100ms ease-in-out 0s;
-    transform: translateZ(0);
-}
-
-.gallery>div:hover {
-    z-index: 1;
-}
-
-.gallery>div:hover>img {
-    transform: scale(2, 2);
-    transition: transform 300ms ease-in-out 0s;
-    -webkit-transition: -webkit-transform 300ms ease-in-out 0s;
 }
 
 .cf:before, .cf:after {
