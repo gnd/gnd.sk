@@ -449,6 +449,10 @@ function labnolThumb(id) {
     if (id == 'slNGdcOeJ-4') {
         thumb = '<img src="https://i.ytimg.com/vi/ID/0.jpg">';
     }
+	// smutkova - delete when upscaled
+    if (id == '8iQaGCEgmho') {
+        thumb = '<img src="https://i.ytimg.com/vi/ID/0.jpg">';
+    }
     return thumb.replace("ID", id) + play;
 }
 
