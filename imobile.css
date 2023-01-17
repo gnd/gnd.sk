@@ -288,11 +288,16 @@ body {
 }
 
 .play-left-roles-container {
-    margin-bottom: 250px;
+   margin-bottom: 50px;
 }
 
 .play-left-roles {
     width: 50%;
+}
+
+.play-left-press {
+    margin-top: 50px;
+    //width: 80%;
 }
 
 .play-left-desc {

@@ -277,6 +277,10 @@ body {
     margin-bottom: 5vw;
 }
 
+.play-left-press {
+    margin-top: 5vw;
+}
+
 .play-desc {
     background-color: white;
     line-height: 4vw;
