@@ -465,8 +465,10 @@ function labnolIframe() {
 detect_client();
 
 // 02.07.2024, navigate fast to theatre 
-if (device_type == 'desktop') {
-    navigate('theatre', 0);
-} else {
-    navigate_mobile('theatre', 0);
-}
+window.onload = function() {
+    if (device_type == 'desktop') {
+        navigate('theatre', 0);
+    } else {
+        navigate_mobile('theatre', 0);
+    }
+};
