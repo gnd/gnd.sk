@@ -1,6 +1,6 @@
 // GLOBALS
 var max_background_images = 5;
-var max_plays = 8;
+var max_plays = 14;
 var current_dest = 'vj-container';
 var menu_hidden = true;
 var bio_hidden = true;
@@ -45,7 +45,7 @@ function detect_client() {
 };
 
 
-function navigate(id) {
+function navigate(id, speed) {
     if (bio_on) {
         hidebio();
     }
@@ -66,7 +66,7 @@ function navigate(id) {
         }
         if ((id === 'vj-container') || (id === 'theatre')) {
             unset_strike();
-            smooth_horizontal(document.getElementById(id));
+            smooth_horizontal(document.getElementById(id, speed));
             current_dest = id;
         } else {
             if (((current_dest != 'theatre') && (id != String(max_plays))) ||
@@ -99,7 +99,7 @@ function unset_strike() {
     }
 }
 
-function smooth_horizontal(target) {
+function smooth_horizontal(target, speed) {
     var scrollContainer = target;
 
     do { //find scroll container
@@ -117,54 +117,54 @@ function smooth_horizontal(target) {
     // start scrolling
     scrollContainer.scrollTop = 0;
     if (targetY < 100) {
-        $('#theatre-menu').fadeOut(300);
-        $('#language-menu').fadeOut(300);
+        $('#theatre-menu').fadeOut(speed);
+        $('#language-menu').fadeOut(speed);
         $('#menu').animate({
             'marginLeft': '2.5%'
-        }, 300);
+        }, speed);
         $('.menu-text').animate({
             'color': 'black'
-        }, 300);
+        }, speed);
         $('.menu-text').animate({
             'backgroundColor': 'white'
-        }, 300);
+        }, speed);
         $('.nav-container').animate({
             'right': '0%'
-        }, 500);
+        }, speed);
     }
     $('html,body').animate({
         scrollLeft: targetY
-    }, 500);
+    }, speed);
     if (targetY > 100) {
-        $("#theatre-menu").fadeIn(500);
-        $("#language-menu").fadeIn(500);
+        $("#theatre-menu").fadeIn(speed);
+        $("#language-menu").fadeIn(speed);
         $('#menu').animate({
             'marginLeft': '5%'
-        }, 300);
+        }, speed);
         $('.menu-text').animate({
             'color': 'white'
-        }, 300);
+        }, speed);
         $('.menu-text').animate({
             'backgroundColor': 'black'
-        }, 300);
+        }, speed);
         $('.nav-container').animate({
             'right': '97%'
-        }, 500);
+        }, speed);
     }
 
 }
 
-function navigate_mobile() {
+function navigate_mobile(speed) {
     if (current_dest == 'vj-container') {
         id = 'theatre';
     } else {
         id = 'vj-container';
     }
-    smooth_horizontal_mobile(id);
+    smooth_horizontal_mobile(id, speed);
     current_dest = id;
 }
 
-function smooth_horizontal_mobile(target) {
+function smooth_horizontal_mobile(target, speed) {
     if (target == 'vj-container') {
         document.getElementById('vj-container').style.display = 'block';
         document.getElementById('vj-container').style.width = '100%';
@@ -174,13 +174,13 @@ function smooth_horizontal_mobile(target) {
         document.getElementById('theatre-container').style.display = 'none';
         $('#menu').animate({
             'marginLeft': '1%'
-        }, 250);
+        }, speed);
         $('.menu-text').animate({
             'color': 'black'
-        }, 250);
+        }, speed);
         $('.menu-text').animate({
             'backgroundColor': 'white'
-        }, 250);
+        }, speed);
         document.getElementById('menu-mobile').removeChild(document.getElementById('menu-mobile').firstChild);
         document.getElementById('menu-mobile').appendChild(document.createTextNode("THEATRE"));
     }
@@ -194,13 +194,13 @@ function smooth_horizontal_mobile(target) {
         document.getElementById('vj-main').style.visibility = 'hidden';
         $('#menu').animate({
             'marginLeft': '3%'
-        }, 250);
+        }, speed);
         $('.menu-text').animate({
             'color': 'white'
-        }, 250);
+        }, speed);
         $('.menu-text').animate({
             'backgroundColor': 'black'
-        }, 250);
+        }, speed);
         document.getElementById('menu-mobile').removeChild(document.getElementById('menu-mobile').firstChild);
         document.getElementById('menu-mobile').appendChild(document.createTextNode("VIDEO"));
     }
@@ -463,3 +463,10 @@ function labnolIframe() {
 
 // get the client type
 detect_client();
+
+// 02.07.2024, navigate fast to theatre 
+if (device_type == 'desktop') {
+    navigate('theatre', 0);
+} else {
+    navigate_mobile('theatre', 0);
+}
