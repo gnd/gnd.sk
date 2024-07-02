@@ -461,11 +461,11 @@ function labnolIframe() {
     this.parentNode.replaceChild(iframe, this);
 }
 
-// get the client type
-detect_client();
-
 // 02.07.2024, navigate fast to theatre 
 window.onload = function() {
+    // get the client type
+    detect_client();
+
     if (device_type == 'desktop') {
         navigate('theatre', 0);
     } else {
