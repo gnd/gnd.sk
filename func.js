@@ -282,15 +282,15 @@ function events() {
         if (current_dest == 'vj-container') {
             document.getElementById('events').style.backgroundColor = 'white';
             document.getElementById('events').style.color = 'black';
-            if (device_type == 'desktop') {
-                document.getElementById('events').style.left = '30%';
-            }
+            //if (device_type == 'desktop') {
+           //     document.getElementById('events').style.left = '15%';
+            //}
         } else {
             document.getElementById('events').style.backgroundColor = 'black';
             document.getElementById('events').style.color = 'white';
-            if (device_type == 'desktop') {
-                document.getElementById('events').style.left = '130%';
-            }
+            //if (device_type == 'desktop') {
+            //    document.getElementById('events').style.left = '115%';
+           // }
         }
         $("#events").fadeIn(300);
         setTimeout(function() {
