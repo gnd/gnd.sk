@@ -55,13 +55,13 @@ body {
     opacity: 1.0;
     visibility: hidden;
     width: 70%;
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-family: 'Roboto Condensed', sans-serif;
 }
 
-#events {
-    position: absolute;
-}
+//#events {
+//    position: absolute;
+//}
 
 #bio-content {
     padding-left: 5%;
