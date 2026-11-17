@@ -46,22 +46,28 @@ body {
     cursor: pointer;
 }
 
-.info_div {
-    background-color: white;
+/* The invisible full-screen scroll container */
+.info_backdrop {
     position: fixed;
-    left: 15%;
-    top: 15%;
+    inset: 0; /* Covers top: 0, right: 0, bottom: 0, left: 0 of current viewport */
+    overflow-y: auto; /* Lets you scroll down the long div */
     z-index: 6;
-    opacity: 1.0;
     visibility: hidden;
-    width: 70%;
-    font-size: 1.1em;
-    font-family: 'Roboto Condensed', sans-serif;
+    background-color: rgba(0, 0, 0, 0.4); /* Optional: dims the background page */
+    padding: 15vh 0; /* Creates the 15% top/bottom breathing room */
 }
 
-//#events {
-//    position: absolute;
-//}
+/* Your long div—no height limits */
+.info_div {
+    background-color: white;
+    width: 70%;
+    margin: 0 auto; /* Centers it horizontally (replaces left: 15%) */
+    font-size: 1.1em;
+    font-family: 'Roboto Condensed', sans-serif;
+    box-sizing: border-box;
+    padding: 2rem;
+    visibility: hidden;
+}
 
 #bio-content {
     padding-left: 5%;
